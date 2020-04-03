@@ -1,7 +1,7 @@
 {
   "name": "division2builder",
   "version": "0.1.0",
-  "homepage": "http://Division2Builder.github.io/division2builder",
+  "homepage": "http://division2builder.github.io/division2builder",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
