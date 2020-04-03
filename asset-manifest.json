@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/division2builder/static/css/main.523f09c5.chunk.css",
+    "main.js": "/division2builder/static/js/main.e60171bc.chunk.js",
+    "main.js.map": "/division2builder/static/js/main.e60171bc.chunk.js.map",
+    "runtime-main.js": "/division2builder/static/js/runtime-main.9f6a4a9e.js",
+    "runtime-main.js.map": "/division2builder/static/js/runtime-main.9f6a4a9e.js.map",
+    "static/js/2.1d13f779.chunk.js": "/division2builder/static/js/2.1d13f779.chunk.js",
+    "static/js/2.1d13f779.chunk.js.map": "/division2builder/static/js/2.1d13f779.chunk.js.map",
+    "index.html": "/division2builder/index.html",
+    "precache-manifest.1e639af13e47856c5b6d19d6ecd77e1c.js": "/division2builder/precache-manifest.1e639af13e47856c5b6d19d6ecd77e1c.js",
+    "service-worker.js": "/division2builder/service-worker.js",
+    "static/css/main.523f09c5.chunk.css.map": "/division2builder/static/css/main.523f09c5.chunk.css.map",
+    "static/js/2.1d13f779.chunk.js.LICENSE.txt": "/division2builder/static/js/2.1d13f779.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/division2builder/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f6a4a9e.js",
+    "static/js/2.1d13f779.chunk.js",
+    "static/css/main.523f09c5.chunk.css",
+    "static/js/main.e60171bc.chunk.js"
+  ]
+}
