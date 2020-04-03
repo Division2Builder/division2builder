@@ -1,0 +1,44 @@
+.createBuildGrid{
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.signature{
+    flex-grow: 2;
+    flex-basis: 80%;
+    background-color: yellow;
+}
+
+.gernade{
+    flex-grow: 1;
+    flex-basis: 20%;
+    background-color: orange;
+}
+
+.weapon{
+    flex-grow: 2;
+    flex-basis: 40%;
+    background-color: blue;
+}
+
+.sidearm{
+    flex-grow: 1;
+    flex-basis: 20%;
+    background-color: green;
+}
+
+.armor{
+    flex-grow: 2;
+    flex-basis: 50%;
+    background-color: red;
+}
+
+.skill{
+    flex-grow: 2;
+    background-color: salmon;
+}
