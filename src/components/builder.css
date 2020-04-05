@@ -10,29 +10,47 @@
 
 .signature{
     flex-grow: 2;
-    flex-basis: 80%;
+    flex-basis: 75%;
 }
 
 .gernade{
     flex-grow: 1;
-    flex-basis: 20%;
+    flex-basis: 15%;
 }
 
 .weapon{
     flex-grow: 2;
-    flex-basis: 40%;
+    flex-basis: 35%;
 }
 
 .sidearm{
     flex-grow: 1;
-    flex-basis: 20%;
+    flex-basis: 15%;
 }
 
 .armor{
     flex-grow: 2;
-    flex-basis: 50%;
+    flex-basis: 45%;
 }
 
 .skill{
     flex-grow: 2;
+}
+
+.card{
+    background-color: rgba(0, 0, 0, 0.55);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.card:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.icon{
+    float: left;
+    margin: 5px;
+    height: 100px;
+    vertical-align: center;
 }

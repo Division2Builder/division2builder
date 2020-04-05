@@ -10,49 +10,49 @@ import './builder.css'
 function GearSelection() {
     return (
         <div className="createBuildGrid">
-            <div className="signature">
+            <div className="card signature">
                 Placeholder Text
             </div>
-            <div className="gernade">
+            <div className="card gernade">
                 Placeholder Text
             </div>
-            <div className="weapon">
+            <div className="card weapon">
                 Placeholder Text
             </div>
-            <div className="weapon">
+            <div className="card weapon">
                 Placeholder Text
             </div>
-            <div className="sidearm">
+            <div className="card sidearm">
                 Placeholder Text
             </div>
-            <div className="armor" id="mask">
-                <img src={Mask} alt="backpack"/>
+            <div className="card armor" id="mask">
+                <img className="icon" src={Mask} alt="backpack"/>
                 Placeholder Text
             </div>
-            <div className="armor" id="backpack">
-                <img src={Backpack} alt="backpack"/>
+            <div className="card armor" id="backpack">
+                <img className="icon" src={Backpack} alt="backpack"/>
                 Placeholder Text
             </div>
-            <div className="armor" id="vest">
-                <img src={Vest} alt="backpack"/>
+            <div className="card armor" id="vest">
+                <img className="icon" src={Vest} alt="backpack"/>
                 Placeholder Text
             </div>
-            <div className="armor" id="glove">
-                <img src={Glove} alt="backpack"/>
+            <div className="card armor" id="glove">
+                <img className="icon" src={Glove} alt="backpack"/>
                 Placeholder Text
             </div>
-            <div className="armor" id="holster">
-                <img src={Holster} alt="backpack"/>
+            <div className="card armor" id="holster">
+                <img className="icon" src={Holster} alt="backpack"/>
                 Placeholder Text
             </div>
-            <div className="armor" id="kneepads">
-                <img src={Kneepads} alt="backpack"/>
+            <div className="card armor" id="kneepads">
+                <img className="icon" src={Kneepads} alt="backpack"/>
                 Placeholder Text
             </div>
-            <div className="skill" >
+            <div className="card skill" >
                 Placeholder Text
             </div>
-            <div className="skill" >
+            <div className="card skill" >
                 Placeholder Text
             </div>
         </div>
