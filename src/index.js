@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './fonts/Borda.ttf'
+import './fonts/Borda Italic.ttf'
+import './fonts/Borda Bold.ttf'
+import './fonts/Borda Bold Italic.ttf'
+import './fonts/Borda Light.ttf'
+import './fonts/Borda Light Italic.ttf'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
