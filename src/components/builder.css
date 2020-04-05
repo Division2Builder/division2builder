@@ -42,6 +42,7 @@
     color: rgba(255, 255, 255, 1);
     border-radius: 15px;
     margin: 5px;
+    display: flex;
 }
 
 .card:hover{
@@ -52,5 +53,21 @@
     float: left;
     margin: 5px;
     height: 100px;
-    vertical-align: center;
+}
+
+.weapon .icon{
+    height: 75px;
+}
+
+.name{
+    float: left;
+    font-size: medium;
+}
+
+.named{
+    color: orange;
+}
+
+.unselected{
+    margin: auto;
 }
