@@ -1,4 +1,6 @@
 import React from 'react';
+import Stats from './stats.js'
+import { Modal, Button } from 'react-materialize';
 import Mask from '../icons/gear_types/mask.png'
 import Backpack from '../icons/gear_types/backpack.png'
 import Vest from '../icons/gear_types/vest.png'
@@ -7,6 +9,8 @@ import Holster from '../icons/gear_types/holster.png'
 import Kneepads from '../icons/gear_types/kneepads.png'
 import Rifle from '../icons/weapons/Rifle.png'
 import './builder.css'
+
+const trigger = <Button className="button">View Stats</Button>;
 
 function GearSelection() {
     return (
@@ -58,6 +62,9 @@ function GearSelection() {
             <div className="card skill" >
                 <span className="unselected">Select a skill</span>
             </div>
+            <Modal className="statsModal" header="Stats" trigger={trigger}>
+                <Stats/>
+            </Modal>
         </div>
     );
 }

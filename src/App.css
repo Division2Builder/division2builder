@@ -36,8 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-@font-face {
-  font-family: 'Borda';
-  src: local('Borda'), url(./fonts/Borda.ttf) format('truetype');
-}
