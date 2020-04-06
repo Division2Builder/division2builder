@@ -8,7 +8,7 @@ import Glove from '../icons/gear_types/gloves.png'
 import Holster from '../icons/gear_types/holster.png'
 import Kneepads from '../icons/gear_types/kneepads.png'
 import Rifle from '../icons/weapons/Rifle.png'
-import './builder.css'
+import './gearSelection.css'
 
 const trigger = <Button className="button">View Stats</Button>;
 
@@ -70,4 +70,3 @@ function GearSelection() {
 }
     
 export default GearSelection;
-    
