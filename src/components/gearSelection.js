@@ -6,6 +6,7 @@ import Glove from '../icons/gear_types/gloves.png'
 import Holster from '../icons/gear_types/holster.png'
 import Kneepads from '../icons/gear_types/kneepads.png'
 import Rifle from '../icons/weapons/Rifle.png'
+import Selector from './shared/selector';
 import './builder.css'
 
 function GearSelection() {
@@ -22,9 +23,12 @@ function GearSelection() {
                 <img className="icon" src={Rifle} alt="primary"/>
                 <span className="name named">Baker's Dozen</span>
             </div>
-            <div className="card weapon">
-                <span className="unselected">Select a Weapon</span>
-            </div>
+            <Selector
+                isWeapon
+                isNamed
+                name="Baker's Dozen"
+                weaponType="rifle"
+            />
             <div className="card sidearm">
                 <span className="unselected">Select a Sidearm</span>
             </div>
