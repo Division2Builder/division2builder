@@ -1,7 +1,7 @@
 import React from 'react';
-import GearSelection from './components/gearSelection'
+import GearSelection from './components/gearSelection';
 import './App.css';
-import Background from './components/shared/background.png'
+import Background from './components/shared/background.png';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
   );
 }
 
-var style = {
+const style = {
   backgroundImage: `url(${Background})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover'
