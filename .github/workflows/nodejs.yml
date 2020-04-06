@@ -25,6 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-#    - run: npm run deploy
+    - run: npm run deploy
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
       env:
         CI: true
