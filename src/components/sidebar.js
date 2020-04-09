@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import Chart from 'chart.js';
 
-import './sidebar.css'
+import './sidebar.scss'
 import Red from '../icons/attrs/red.png'
 import Yellow from '../icons/attrs/yellow.png'
 import Blue from '../icons/attrs/blue.png'

@@ -1,6 +1,6 @@
 import React from 'react';
 import GearSelection from './components/gearSelection'
-import './App.css';
+import './App.scss';
 import Background from './components/shared/background.png'
 import Sidebar from "./components/sidebar";
 
