@@ -1,4 +1,4 @@
-.signature{
+.specialization{
     flex-grow: 2;
     flex-basis: 75%;
 }
@@ -60,4 +60,8 @@
 
 .unselected{
     margin: auto;
+}
+
+.specializationName{
+    font-size: xx-large;
 }
