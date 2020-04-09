@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Mask from '../icons/gear_types/mask.png';
-import Backpack from '../icons/gear_types/backpack.png';
-import Vest from '../icons/gear_types/vest.png';
-import Glove from '../icons/gear_types/gloves.png';
-import Holster from '../icons/gear_types/holster.png';
-import Kneepads from '../icons/gear_types/kneepads.png';
+import Mask from '../../icons/gear_types/mask.png';
+import Backpack from '../../icons/gear_types/backpack.png';
+import Vest from '../../icons/gear_types/vest.png';
+import Glove from '../../icons/gear_types/gloves.png';
+import Holster from '../../icons/gear_types/holster.png';
+import Kneepads from '../../icons/gear_types/kneepads.png';
 import Assult from '../../icons/weapons/AssultRifle.png';
 import LMG from '../../icons/weapons/Light Machine Gun.png';
 import Marksman from '../../icons/weapons/Marksman Rifle.png';
 import Rifle from '../../icons/weapons/Rifle.png';
 import Shotgun from '../../icons/weapons/Shotgun.png';
 import Submachine from '../../icons/weapons/Submachine Gun.png';
-import './builder.css';
+import './selector.css';
 
 const armorIcons = {
     mask: Mask,
