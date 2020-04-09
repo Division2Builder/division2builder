@@ -1,6 +1,8 @@
 name: Run tests on PRs
 
-on: [push]
+on:
+  push:
+    branches-ignore: [ master ]
 
 jobs:
   build_test:
