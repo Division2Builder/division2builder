@@ -12,19 +12,22 @@
 
 .sidebarGrid {
     flex-basis: 20%;
+    padding: 10px;
+}
+
+.sidebarGrid > * {
+    padding: 10px;
 }
 
 .lineBelow {
     border-bottom: 1px solid white;
 }
 
-.circleLevel {
+.skillsCircle {
     flex-grow: 1;
 }
 
 .attrsSection {
-    width: 100%;
-    padding: 10px;
     justify-content: space-between;
 }
 
@@ -36,13 +39,15 @@
 
 .defenseStats {
     text-align: end;
-    margin: 10px;
 }
 
 .skillTier {
-
+    text-align: end;
 }
 
-.skillIcons {
-
+.skillCell {
+    border: 2px solid white;
+    background: gray;
+    height: 25px;
+    flex-grow: 1;
 }
