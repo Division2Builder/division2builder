@@ -9,7 +9,7 @@ import Blue from '../icons/attrs/blue.png'
 export default function Sidebar() {
     useEffect(() => {
         const ctx = document.getElementById('donutChart').getContext('2d');
-        const skillDonut = new Chart(ctx, {
+        new Chart(ctx, {
             type: 'doughnut',
             data: {
                 datasets: [{
