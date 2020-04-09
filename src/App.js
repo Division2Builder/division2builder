@@ -12,13 +12,13 @@ function App() {
                 <GearSelection/>
             </div>
             < /div>
-                );
-                }
+    );
+}
 
-                const style = {
-                backgroundImage: `url(${Background})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover'
-            };
+const style = {
+    backgroundImage: `url(${Background})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover'
+};
 
-                export default App;
+export default App;
