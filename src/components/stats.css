@@ -1,33 +1,68 @@
-.statsGrid{
-    padding: 10px;
-    width: 25%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 .statsModal{
     background-color: rgba(0, 0, 0, 0.315);
     color: rgba(255, 255, 255, 1);
 }
 
-.card{
+.statsGrid{
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid{
+    flex: 1;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+.sectionSelectionGrid {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0%;
+    flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.55);
     color: rgba(255, 255, 255, 1);
     border-radius: 15px;
     margin: 5px;
-    display: flex;
 }
 
-.card:hover{
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.icon{
-    float: left;
+.dsIco {
+    height: 50px;
+    width: 50px;
     margin: 5px;
-    height: 100px;
+}
+
+.dsIco:hover {
+    background-color: red;
+}
+
+.statValuesGrid{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    margin: 5px;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.statSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat{
+    max-height: 25px;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    margin: 5px;
 }
 
 .statAmount{
@@ -40,6 +75,26 @@
 
 .statName{
     padding-left: 20px;
+    padding-right: 40px;
     float: right;
     font-size: medium;
+}
+
+.statBreakdownGrid{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.breakdownDescription {
+    display: flex;
+    flex-direction: column;
+}
+
+.breakdownItem {
+    display: flex;
+    flex-direction: column;
 }
