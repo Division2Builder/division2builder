@@ -8,18 +8,16 @@ import Glove from '../icons/gear_types/gloves.png'
 import Holster from '../icons/gear_types/holster.png'
 import Kneepads from '../icons/gear_types/kneepads.png'
 import Rifle from '../icons/weapons/Rifle.png'
-import './gearSelection.css'
-
-const trigger = <Button className="button">View Stats</Button>;
+import './builder.scss'
 
 function GearSelection() {
     return (
         <div className="createBuildGrid">
             <div className="card signature">
-                Placeholder Text
+                Signature
             </div>
             <div className="card grenade">
-                Placeholder Text
+                Grenade
             </div>
             <div className="card weapon">
                 <img className="icon" src={Rifle} alt="primary"/>

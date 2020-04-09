@@ -1,13 +1,17 @@
 import React from 'react';
-import GearSelection from './components/gearSelection';
-import './App.css';
-import Background from './components/shared/background.png';
+import GearSelection from './components/gearSelection'
+import './App.scss';
+import Background from './components/shared/background.png'
+import Sidebar from "./components/sidebar";
 
 function App() {
   return (
-    <div className="App" style={style}>
-      <GearSelection/>
-    </div>
+      <div className="App" style={style}>
+        <div className="appContainer">
+          <Sidebar/>
+          <GearSelection/>
+        </div>
+      </div>
   );
 }
 
