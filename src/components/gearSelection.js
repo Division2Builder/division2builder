@@ -18,8 +18,7 @@ function GearSelection() {
             <div className="card signature">
                 Placeholder Text
             </div>
-            <div className="card gernade">
-                
+            <div className="card grenade">
                 Placeholder Text
             </div>
             <div className="card weapon">
