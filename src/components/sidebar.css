@@ -1,0 +1,19 @@
+.sidebarGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 20%;
+}
+
+.lineBelow {
+    border-bottom: 1px solid white;
+}
+
+.circleLevel {
+
+}
+
+.defenseStats {
+    text-align: end;
+    margin: 10px;
+}

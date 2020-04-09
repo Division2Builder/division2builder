@@ -1,11 +1,9 @@
 .createBuildGrid{
-    padding: 10px;
-    width: 80%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    
+    flex-basis: 75%;
 }
 
 .signature{

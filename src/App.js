@@ -2,19 +2,23 @@ import React from 'react';
 import GearSelection from './components/gearSelection'
 import './App.css';
 import Background from './components/shared/background.png'
+import Sidebar from "./components/sidebar";
 
 function App() {
-  return (
-    <div className="App" style={style}>
-      <GearSelection/>
-    </div>
-  );
-}
+    return (
+        <div className="App" style={style}>
+            <div className="appContainer">
+                <Sidebar/>
+                <GearSelection/>
+            </div>
+            < /div>
+                );
+                }
 
-var style = {
-  backgroundImage: `url(${Background})`,
-  backgroundPosition: 'center',
-  backgroundSize: 'cover'
-};
+                const style = {
+                backgroundImage: `url(${Background})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover'
+            };
 
-export default App;
+                export default App;

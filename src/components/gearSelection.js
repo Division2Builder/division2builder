@@ -12,10 +12,10 @@ function GearSelection() {
     return (
         <div className="createBuildGrid">
             <div className="card signature">
-                Placeholder Text
+                Signature
             </div>
             <div className="card grenade">
-                Placeholder Text
+                Grenade
             </div>
             <div className="card weapon">
                 <img className="icon" src={Rifle} alt="primary"/>
@@ -62,4 +62,3 @@ function GearSelection() {
 }
     
 export default GearSelection;
-    
