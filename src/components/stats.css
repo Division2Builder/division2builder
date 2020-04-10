@@ -1,5 +1,5 @@
 .statsModal{
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(0, 0, 0, 0.705);
     color: rgba(255, 255, 255, 1);
 }
 
@@ -14,15 +14,14 @@
 .grid{
     flex: 1;
     box-sizing: border-box;
-    width: fit-content;
+    max-height: 500px;
 }
 
 .sectionSelectionGrid {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    flex-basis: 0%;
-    flex-grow: 1;
+    flex-basis: 10%;
     background-color: rgba(0, 0, 0, 0.55);
     color: rgba(255, 255, 255, 1);
     border-radius: 15px;
@@ -30,26 +29,29 @@
 }
 
 .dsIco {
+    display: flex;
+    align-self: center;
     height: 50px;
     width: 50px;
     margin: 5px;
 }
 
 .dsIco:hover {
-    background-color: red;
+    background-color: orange;
 }
 
 .statValuesGrid{
     padding: 10px;
     display: flex;
     flex-direction: column;
+    flex-basis: 50%;
     justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.55);
     color: rgba(255, 255, 255, 1);
     border-radius: 15px;
     margin: 5px;
     overflow-y: scroll;
-    max-height: 500px;
+    scroll-behavior: smooth;
 }
 
 .statSection {
@@ -58,7 +60,6 @@
 }
 
 .stat{
-    max-height: 25px;
     background-color: rgba(0, 0, 0, 0.55);
     color: rgba(255, 255, 255, 1);
     border-radius: 15px;
@@ -83,6 +84,7 @@
 .statBreakdownGrid{
     display: flex;
     flex-direction: column;
+    flex-basis: 37%;
     background-color: rgba(0, 0, 0, 0.55);
     color: rgba(255, 255, 255, 1);
     border-radius: 15px;

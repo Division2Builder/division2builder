@@ -10,6 +10,8 @@ import Kneepads from '../icons/gear_types/kneepads.png'
 import Rifle from '../icons/weapons/Rifle.png'
 import './builder.scss'
 
+const trigger = <Button className="button">View Stats</Button>;
+
 function GearSelection() {
     return (
         <div className="createBuildGrid">

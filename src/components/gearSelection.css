@@ -3,8 +3,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-<<<<<<< HEAD:src/components/gearSelection.css
     font-family: Borda;
+    flex-basis: 75%;
 }
 
 .button{
@@ -14,9 +14,6 @@
 
 .button:hover{
     background-color: peru;
-=======
-    flex-basis: 75%;
->>>>>>> master:src/components/builder.scss
 }
 
 .signature{
