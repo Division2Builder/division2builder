@@ -17,6 +17,24 @@ import Survivalist from '../../icons/specializations/survivalist.png';
 import Sharpshooter from '../../icons/specializations/sharpshooter.png';
 import Gunner from '../../icons/specializations/gunner.png'
 import Technician from '../../icons/specializations/technician.png'
+import Breadbasket from '../../icons/weapons/talents/Breadbasket.png'
+import ClosePersonal from '../../icons/weapons/talents/Close & Personal.png'
+import Eyeless from '../../icons/weapons/talents/Eyeless.png'
+import FastHands from '../../icons/weapons/talents/Fast Hands.png'
+import Ignited from '../../icons/weapons/talents/Ignited.png'
+import Killer from '../../icons/weapons/talents/Killer.png'
+import LuckyShot from '../../icons/weapons/talents/Lucky Shot.png'
+import Optimist from '../../icons/weapons/talents/Optimist.png'
+import Perpetuation from '../../icons/weapons/talents/Perpetuation.png'
+import Preservation from '../../icons/weapons/talents/Preservation.png'
+import Ranger from '../../icons/weapons/talents/Ranger.png'
+import Reformation from '../../icons/weapons/talents/Reformation.png'
+import Rifleman from '../../icons/weapons/talents/Rifleman.png'
+import Sadist from '../../icons/weapons/talents/Sadist.png'
+import Spike from '../../icons/weapons/talents/Spike.png'
+import SteadyHanded from '../../icons/weapons/talents/Steady Handed.png'
+import Strained from '../../icons/weapons/talents/Strained.png'
+import Vindictive from '../../icons/weapons/talents/Vindictive.png'
 import './selector.css';
 
 const armorIcons = {
@@ -44,6 +62,27 @@ const specializationIcons = {
     gunner: Gunner,
     technician: Technician
 };
+
+const weaponTaletsIcons = {
+    breadbasket: Breadbasket,
+    closePersonal: ClosePersonal,
+    eyeless: Eyeless,
+    fasthands: FastHands,
+    ignited: Ignited,
+    killer: Killer,
+    luckyshot: LuckyShot,
+    optimist: Optimist,
+    perpetuation: Perpetuation,
+    preservation: Preservation,
+    ranger: Ranger,
+    reformation: Reformation,
+    rifleman: Rifleman,
+    sadist: Sadist,
+    spike: Spike,
+    steadyHanded: SteadyHanded,
+    strained: Strained,
+    vindictive: Vindictive
+}
 
 function Selector(props) {
     return (
@@ -96,4 +135,50 @@ Selector.defaultProps={
     isNamed: false
 }
 
-export default Selector
+export function WeaponCard(props) {
+    return (
+        <div className={`card weapon`} id={"weapon"} onClick={
+            ()=>{
+                if(props.weapon.name !== ""){
+                    alert("test") //Update existing weapon
+                } else {
+                    alert("test1") //Create new weapon
+                }
+            }}>
+            {
+                props.weapon.name !== "" ? (
+                    <>
+                        <img className="icon" src={weaponIcons[props.weapon.type]} alt={props.category}/>
+                        <span className={`name ${props.weapon.isNamed && 'named'}`}>{props.weapon.name}</span><br/>
+                        <span className="damage">{props.damage}</span>
+                        <img className="talentIcon" src={weaponTaletsIcons[props.weapon.talent.icon]} alt={props.weapon.talent.icon}/>
+                    </>
+                ):(
+                    <span className="unselected">Select an weapon</span>
+                )
+            }
+            
+        </div>
+    )
+}
+
+WeaponCard.propTypes={
+    weapon: PropTypes.shape({
+        name: PropTypes.string,
+        type: PropTypes.string,
+        damage: PropTypes.number,
+        talent: PropTypes.shape({
+            name: PropTypes.string,
+            desc: PropTypes.string,
+            icon: PropTypes.string
+        }),
+        isNamed: PropTypes.bool
+    }),
+    context: PropTypes.string
+}
+
+WeaponCard.defaultProps={
+    isSelected: false
+}
+
+export default Selector;

@@ -1,5 +1,5 @@
 import React from 'react';
-import GearSelection from './components/gearSelection'
+import GearSelection from './components/gearGrid'
 import './App.css';
 import Background from './components/shared/background.png'
 

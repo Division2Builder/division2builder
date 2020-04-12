@@ -33,6 +33,7 @@
     border-radius: 15px;
     margin: 5px;
     display: flex;
+    justify-content: space-between;
 }
 
 .card:hover{
@@ -64,4 +65,10 @@
 
 .specializationName{
     font-size: xx-large;
+}
+
+.talentIcon{
+    float: right;
+    height: 75px;
+    margin: 5px;
 }
