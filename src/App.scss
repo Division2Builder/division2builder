@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.appContainer {
+  margin: 0 auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +39,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.holo-card {
+  background-color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.holo-card:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }

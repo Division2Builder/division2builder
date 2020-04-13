@@ -7,11 +7,11 @@ import Sidebar from "./components/sidebar";
 function App() {
     return (
         <div className="App" style={style}>
-            <div className="container row">
+            <div className="container row appContainer">
                 <Sidebar/>
                 <GearSelection/>
             </div>
-            < /div>
+        </div>
     );
 }
 

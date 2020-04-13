@@ -1,9 +1,9 @@
 .sidebarGrid > * {
-    padding: 10px;
+  padding: 10px;
 }
 
 .lineBelow {
-    border-bottom: 1px solid white;
+  border-bottom: 1px solid lightgray;
 }
 
 .skillsCircle {
@@ -13,20 +13,19 @@
 }
 
 .attrsIcon {
-    height: 1em;
+  height: 1em;
 }
 
 .defenseStats {
-    text-align: end;
+  text-align: end;
 }
 
 .skillTier {
-    text-align: end;
+  text-align: end;
 }
 
 .skillCell {
-    border: 2px solid white;
-    background: gray;
-    height: 1em;
-    flex-grow: 1;
+  border: 2px solid lightgray;
+  background: gray;
+  height: 1em;
 }
