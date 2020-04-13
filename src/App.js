@@ -7,7 +7,7 @@ import Sidebar from "./components/sidebar";
 function App() {
     return (
         <div className="App" style={style}>
-            <div className="appContainer">
+            <div className="container row">
                 <Sidebar/>
                 <GearSelection/>
             </div>

@@ -10,7 +10,7 @@ import './builder.scss'
 
 function GearSelection() {
     return (
-        <div className="createBuildGrid">
+        <div className="createBuildGrid col-xs-12 col-lg-9">
             <div className="card signature">
                 Signature
             </div>

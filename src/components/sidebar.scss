@@ -1,20 +1,3 @@
-.flex-row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.flex-column {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.sidebarGrid {
-    flex-basis: 20%;
-    padding: 10px;
-}
-
 .sidebarGrid > * {
     padding: 10px;
 }
@@ -24,17 +7,13 @@
 }
 
 .skillsCircle {
-    flex-grow: 1;
 }
 
 .attrsSection {
-    justify-content: space-between;
 }
 
 .attrsIcon {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
+    height: 1em;
 }
 
 .defenseStats {
@@ -48,6 +27,6 @@
 .skillCell {
     border: 2px solid white;
     background: gray;
-    height: 25px;
+    height: 1em;
     flex-grow: 1;
 }

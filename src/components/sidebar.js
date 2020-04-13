@@ -32,56 +32,56 @@ export default function Sidebar() {
         });
     });
     return (
-        <div className="sidebarGrid flex-column card">
-            <div className="skillsCircle lineBelow">
+        <div className="sidebarGrid col-xs-12 col-lg-3 card">
+            <div className="skillsCircle col-xs-12 lineBelow">
                 <canvas id="donutChart"/>
             </div>
-            <div className="attrsSection flex-row lineBelow">
-                <div className="flex-column">
-                    <div className="flex-row">
-                        <img src={Red} alt="Red" className="attrsIcon"/>
-                        <div>5</div>
+            <div className="attrsSection col-xs-12 row lineBelow">
+                <div className="col">
+                    <div className="row">
+                        <img src={Red} alt="Red" className="attrsIcon col"/>
+                        <div className="col">5</div>
                     </div>
-                    <div className="flex-row">
-                        <img src={Blue} alt="Blue" className="attrsIcon"/>
-                        <div>5</div>
+                    <div className="row">
+                        <img src={Blue} alt="Blue" className="attrsIcon col"/>
+                        <div className="col">5</div>
                     </div>
-                    <div className="flex-row">
-                        <img src={Yellow} alt="Yellow" className="attrsIcon"/>
-                        <div>5</div>
+                    <div className="row">
+                        <img src={Yellow} alt="Yellow" className="attrsIcon col"/>
+                        <div className="col">5</div>
                     </div>
                 </div>
-                <div className="flex-column">
-                    <div className="flex-row">
-                        <img src={Red} alt="Red" className="attrsIcon"/>
-                        <div>5</div>
+                <div className="col">
+                    <div className="row">
+                        <img src={Red} alt="Red" className="attrsIcon col"/>
+                        <div className="col">5</div>
                     </div>
-                    <div className="flex-row">
-                        <img src={Blue} alt="Blue" className="attrsIcon"/>
-                        <div>5</div>
+                    <div className="row">
+                        <img src={Blue} alt="Blue" className="attrsIcon col"/>
+                        <div className="col">5</div>
                     </div>
-                    <div className="flex-row">
-                        <img src={Yellow} alt="Yellow" className="attrsIcon"/>
-                        <div>5</div>
+                    <div className="row">
+                        <img src={Yellow} alt="Yellow" className="attrsIcon col"/>
+                        <div className="col">5</div>
                     </div>
                 </div>
             </div>
-            <div className="defenseStats lineBelow">
-                <div>Armor</div>
-                <div>123.4k</div>
-                <div>Health</div>
-                <div>123.4k</div>
+            <div className="defenseStats col-xs-12 lineBelow">
+                <h5>Armor</h5>
+                <h6>123.4k</h6>
+                <h5>Health</h5>
+                <h6>123.4k</h6>
             </div>
-            <div className="skillTier">
+            <div className="skillTier col-xs-12">
                 <div>Skill Tier</div>
-                <div className="flex-row">
-                    <img src={Yellow} alt="Yellow" className="attrsIcon"/>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
+                <div className="row">
+                    <img src={Yellow} alt="Yellow" className="attrsIcon col"/>
+                    <div className="skillCell col"></div>
+                    <div className="skillCell col"></div>
+                    <div className="skillCell col"></div>
+                    <div className="skillCell col"></div>
+                    <div className="skillCell col"></div>
+                    <div className="skillCell col"></div>
                 </div>
             </div>
         </div>
