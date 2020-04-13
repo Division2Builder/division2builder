@@ -7,14 +7,14 @@ function Stats() {
     return (
         <div className="statsGrid">
             <div className="grid sectionSelectionGrid">
-                <img onClick="" name="weaponTalents" className="dsIco" src={Vest} alt="logo"/>
-                <img onClick="" name="weaponStats" className="dsIco" src={Vest} alt="logo"/>
-                <img onClick="" name="offense" className="dsIco" src={Vest} alt="logo"/>
-                <img onClick="" name="gearTalents" className="dsIco" src={Vest} alt="logo"/>
-                <img onClick="" name="gearBrands" className="dsIco" src={Vest} alt="logo"/>
-                <img onClick="" name="defense" className="dsIco" src={Vest} alt="logo"/>
-                <img onClick="" name="ss1" className="dsIco" src={Vest} alt="logo"/>
-                <img onClick="" name="ss2" className="dsIco" src={Vest} alt="logo"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Weapon Talents"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Weapon Stats"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Offense"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Gear Talents"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Gear Brands/Sets"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Defense"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Skill Slot 1"/>
+                <img className="dsIco" src={Vest} onClick ="" alt="Skill Slot 2"/>
             </div>
             <div className="grid statValuesGrid">
                 <div id="weaponTalents" className="statSection">
