@@ -1,53 +1,32 @@
-.flex-row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.flex-column {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.sidebarGrid {
-    flex-basis: 20%;
-    padding: 10px;
-}
-
 .sidebarGrid > * {
-    padding: 10px;
+  padding: 10px;
 }
 
 .lineBelow {
-    border-bottom: 1px solid white;
+  border-bottom: 1px solid lightgray;
 }
 
 .skillsCircle {
-    flex-grow: 1;
 }
 
 .attrsSection {
-    justify-content: space-between;
 }
 
 .attrsIcon {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
+  height: 1em;
+  padding-right: 10px;
 }
 
 .defenseStats {
-    text-align: end;
+  text-align: end;
 }
 
 .skillTier {
-    text-align: end;
+  text-align: end;
 }
 
 .skillCell {
-    border: 2px solid white;
-    background: gray;
-    height: 25px;
-    flex-grow: 1;
+  border: 2px solid lightgray;
+  background: gray;
+  height: 1em;
 }

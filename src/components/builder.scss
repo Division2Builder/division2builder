@@ -4,7 +4,6 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: Borda;
-    flex-basis: 75%;
 }
 
 .button{
@@ -21,62 +20,50 @@
     flex-basis: 75%;
 }
 
-.grenade{
-    flex-grow: 1;
-    flex-basis: 15%;
+.grenade {
+  flex-grow: 1;
+  flex-basis: 15%;
 }
 
-.weapon{
-    flex-grow: 2;
-    flex-basis: 35%;
+.weapon {
+  flex-grow: 2;
+  flex-basis: 35%;
 }
 
-.sidearm{
-    flex-grow: 1;
-    flex-basis: 15%;
+.sidearm {
+  flex-grow: 1;
+  flex-basis: 15%;
 }
 
-.armor{
-    flex-grow: 2;
-    flex-basis: 45%;
+.armor {
+  flex-grow: 2;
+  flex-basis: 45%;
 }
 
-.skill{
-    flex-grow: 2;
-    flex-basis: 45%;
+.skill {
+  flex-grow: 2;
+  flex-basis: 45%;
 }
 
-.card{
-    background-color: rgba(0, 0, 0, 0.55);
-    color: rgba(255, 255, 255, 1);
-    border-radius: 15px;
-    margin: 5px;
-    display: flex;
+.icon {
+  float: left;
+  margin: 5px;
+  height: 100px;
 }
 
-.card:hover{
-    background-color: rgba(0, 0, 0, 0.7);
+.weapon .icon {
+  height: 75px;
 }
 
-.icon{
-    float: left;
-    margin: 5px;
-    height: 100px;
+.name {
+  float: left;
+  font-size: medium;
 }
 
-.weapon .icon{
-    height: 75px;
+.named {
+  color: orange;
 }
 
-.name{
-    float: left;
-    font-size: medium;
-}
-
-.named{
-    color: orange;
-}
-
-.unselected{
-    margin: auto;
+.unselected {
+  margin: auto;
 }

@@ -9,6 +9,7 @@ import './fonts/Borda Light.ttf'
 import './fonts/Borda Light Italic.ttf'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
