@@ -8,7 +8,7 @@ import {Row} from "react-bootstrap";
 function App() {
     return (
         <div className="App" style={style}>
-            <div className="container appContainer">
+            <div className="container">
                 <Row>
                     <Sidebar/>
                     <GearSelection/>
