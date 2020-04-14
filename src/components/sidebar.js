@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
 import Chart from 'chart.js';
 
-import './sidebar.scss'
-import Red from '../icons/attrs/red.png'
-import Yellow from '../icons/attrs/yellow.png'
-import Blue from '../icons/attrs/blue.png'
+import './sidebar.scss';
+import Red from '../icons/attrs/red.png';
+import Yellow from '../icons/attrs/yellow.png';
+import Blue from '../icons/attrs/blue.png';
+import {Col, Row} from 'react-bootstrap';
 
 export default function Sidebar() {
     useEffect(() => {
@@ -32,58 +33,58 @@ export default function Sidebar() {
         });
     });
     return (
-        <div className="sidebarGrid flex-column card">
-            <div className="skillsCircle lineBelow">
+        <div className="sidebarGrid col-xs-12 col-lg-3 holo-card">
+            <div className="skillsCircle row lineBelow">
                 <canvas id="donutChart"/>
             </div>
-            <div className="attrsSection flex-row lineBelow">
-                <div className="flex-column">
-                    <div className="flex-row">
-                        <img src={Red} alt="Red" className="attrsIcon"/>
-                        <div>5</div>
-                    </div>
-                    <div className="flex-row">
-                        <img src={Blue} alt="Blue" className="attrsIcon"/>
-                        <div>5</div>
-                    </div>
-                    <div className="flex-row">
-                        <img src={Yellow} alt="Yellow" className="attrsIcon"/>
-                        <div>5</div>
-                    </div>
-                </div>
-                <div className="flex-column">
-                    <div className="flex-row">
-                        <img src={Red} alt="Red" className="attrsIcon"/>
-                        <div>5</div>
-                    </div>
-                    <div className="flex-row">
-                        <img src={Blue} alt="Blue" className="attrsIcon"/>
-                        <div>5</div>
-                    </div>
-                    <div className="flex-row">
-                        <img src={Yellow} alt="Yellow" className="attrsIcon"/>
-                        <div>5</div>
-                    </div>
-                </div>
+            <div className="attrsSection col-xs-12 row lineBelow">
+                <Col>
+                    <Row className="align-items-center">
+                        <img src={Red} alt="Red" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">5</div>
+                    </Row>
+                    <Row className="align-items-center">
+                        <img src={Blue} alt="Blue" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">5</div>
+                    </Row>
+                    <Row className="align-items-center">
+                        <img src={Yellow} alt="Yellow" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">5</div>
+                    </Row>
+                </Col>
+                <Col>
+                    <Row className="align-items-center">
+                        <img src={Red} alt="Red" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">5</div>
+                    </Row>
+                    <Row className="align-items-center">
+                        <img src={Blue} alt="Blue" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">5</div>
+                    </Row>
+                    <Row className="align-items-center">
+                        <img src={Yellow} alt="Yellow" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">5</div>
+                    </Row>
+                </Col>
             </div>
-            <div className="defenseStats lineBelow">
-                <div>Armor</div>
-                <div>123.4k</div>
-                <div>Health</div>
-                <div>123.4k</div>
-            </div>
-            <div className="skillTier">
-                <div>Skill Tier</div>
-                <div className="flex-row">
-                    <img src={Yellow} alt="Yellow" className="attrsIcon"/>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                    <div className="skillCell"></div>
-                </div>
-            </div>
+            <Col xs={12} className="defenseStats lineBelow">
+                <h4>Armor</h4>
+                <h5>123.4k</h5>
+                <h4>Health</h4>
+                <h5>123.4k</h5>
+            </Col>
+            <Col xs={12} className="skillTier">
+                <p>Skill Tier</p>
+                <Row>
+                    <img src={Yellow} alt="Yellow" className="attrsIcon col-xs-1" align="bottom"/>
+                    <Col className="skillCell"/>
+                    <Col className="skillCell"/>
+                    <Col className="skillCell"/>
+                    <Col className="skillCell"/>
+                    <Col className="skillCell"/>
+                    <Col className="skillCell"/>
+                </Row>
+            </Col>
         </div>
     );
 }
