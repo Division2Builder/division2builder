@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/division2builder/static/css/main.04f4395c.chunk.css",
-    "main.js": "/division2builder/static/js/main.0ba3f995.chunk.js",
-    "main.js.map": "/division2builder/static/js/main.0ba3f995.chunk.js.map",
+    "main.css": "/division2builder/static/css/main.0a185087.chunk.css",
+    "main.js": "/division2builder/static/js/main.3097678c.chunk.js",
+    "main.js.map": "/division2builder/static/js/main.3097678c.chunk.js.map",
     "runtime-main.js": "/division2builder/static/js/runtime-main.9f6a4a9e.js",
     "runtime-main.js.map": "/division2builder/static/js/runtime-main.9f6a4a9e.js.map",
-    "static/js/2.d5ad5e1e.chunk.js": "/division2builder/static/js/2.d5ad5e1e.chunk.js",
-    "static/js/2.d5ad5e1e.chunk.js.map": "/division2builder/static/js/2.d5ad5e1e.chunk.js.map",
+    "static/css/2.de424728.chunk.css": "/division2builder/static/css/2.de424728.chunk.css",
+    "static/js/2.5bacf53f.chunk.js": "/division2builder/static/js/2.5bacf53f.chunk.js",
+    "static/js/2.5bacf53f.chunk.js.map": "/division2builder/static/js/2.5bacf53f.chunk.js.map",
     "index.html": "/division2builder/index.html",
-    "precache-manifest.f0585c1d009f2f798db0e986cb36b179.js": "/division2builder/precache-manifest.f0585c1d009f2f798db0e986cb36b179.js",
+    "precache-manifest.e6c80b8015ab593716df06c38266df65.js": "/division2builder/precache-manifest.e6c80b8015ab593716df06c38266df65.js",
     "service-worker.js": "/division2builder/service-worker.js",
-    "static/css/main.04f4395c.chunk.css.map": "/division2builder/static/css/main.04f4395c.chunk.css.map",
-    "static/js/2.d5ad5e1e.chunk.js.LICENSE.txt": "/division2builder/static/js/2.d5ad5e1e.chunk.js.LICENSE.txt",
+    "static/css/2.de424728.chunk.css.map": "/division2builder/static/css/2.de424728.chunk.css.map",
+    "static/css/main.0a185087.chunk.css.map": "/division2builder/static/css/main.0a185087.chunk.css.map",
+    "static/js/2.5bacf53f.chunk.js.LICENSE.txt": "/division2builder/static/js/2.5bacf53f.chunk.js.LICENSE.txt",
     "static/media/background.png": "/division2builder/static/media/background.775d7e06.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9f6a4a9e.js",
-    "static/js/2.d5ad5e1e.chunk.js",
-    "static/css/main.04f4395c.chunk.css",
-    "static/js/main.0ba3f995.chunk.js"
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.5bacf53f.chunk.js",
+    "static/css/main.0a185087.chunk.css",
+    "static/js/main.3097678c.chunk.js"
   ]
 }
