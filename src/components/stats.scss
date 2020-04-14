@@ -1,9 +1,9 @@
-.statsModal{
+.statsModal {
     background-color: rgba(0, 0, 0, 0.705);
     color: rgba(255, 255, 255, 1);
 }
 
-.statsGrid{
+.statsGrid {
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +11,7 @@
     justify-content: space-between;
 }
 
-.grid{
+.grid {
     flex: 1;
     box-sizing: border-box;
     max-height: 500px;
@@ -28,7 +28,7 @@
     margin: 5px;
 }
 
-.dsIco {
+.sectionIcon {
     display: flex;
     align-self: center;
     height: 50px;
@@ -36,11 +36,11 @@
     margin: 5px;
 }
 
-.dsIco:hover {
+.sectionIcon:hover {
     background-color: orange;
 }
 
-.statValuesGrid{
+.statValuesGrid {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -54,34 +54,7 @@
     scroll-behavior: smooth;
 }
 
-.statSection {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat{
-    background-color: rgba(0, 0, 0, 0.55);
-    color: rgba(255, 255, 255, 1);
-    border-radius: 15px;
-    margin: 5px;
-}
-
-.statAmount{
-    padding-left: 10px;
-    float: left;
-    font-size: medium;
-    font-weight: bold;
-    color: orange;
-}
-
-.statName{
-    padding-left: 20px;
-    padding-right: 40px;
-    float: right;
-    font-size: medium;
-}
-
-.statBreakdownGrid{
+.statBreakdownGrid {
     display: flex;
     flex-direction: column;
     flex-basis: 37%;
@@ -89,14 +62,4 @@
     color: rgba(255, 255, 255, 1);
     border-radius: 15px;
     margin: 5px;
-}
-
-.breakdownDescription {
-    display: flex;
-    flex-direction: column;
-}
-
-.breakdownItem {
-    display: flex;
-    flex-direction: column;
 }

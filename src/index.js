@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import './fonts/Borda.ttf'
 import './fonts/Borda Italic.ttf'
 import './fonts/Borda Bold.ttf'

@@ -1,6 +1,5 @@
 import React from 'react';
 import Stats from './stats.js'
-import { Modal, Button } from 'react-materialize';
 import Mask from '../icons/gear_types/mask.png'
 import Backpack from '../icons/gear_types/backpack.png'
 import Vest from '../icons/gear_types/vest.png'
@@ -9,8 +8,6 @@ import Holster from '../icons/gear_types/holster.png'
 import Kneepads from '../icons/gear_types/kneepads.png'
 import Rifle from '../icons/weapons/Rifle.png'
 import './builder.scss'
-
-const trigger = <Button className="button">View Stats</Button>;
 
 function GearSelection() {
     return (
@@ -61,9 +58,29 @@ function GearSelection() {
             <div className="holo-card skill" >
                 <span className="unselected">Select a skill</span>
             </div>
-            <Modal className="statsModal" header="Stats" trigger={trigger}>
-                <Stats/>
-            </Modal>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#statsModal">
+                View Stats
+            </button>
+            
+            <div class="modal fade" id="statsModal" role="dialog" aria-labelledby="statsModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="statsModalLabel">Stats</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <Stats/>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
