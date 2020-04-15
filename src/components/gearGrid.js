@@ -1,6 +1,7 @@
 import React from 'react';
 import Selector, {WeaponCard} from './shared/card';
-import './builder.css'
+import './builder.scss'
+import Stats from './stats.js'
 
 class GearSelection extends React.Component {
     state={
@@ -35,7 +36,7 @@ class GearSelection extends React.Component {
                 {this.state.itemClicked !== "" && (
                     <div></div>
                 )}
-                <div className="createBuildGrid">
+                <div className="createBuildGrid col-xs-12 col-lg-9 row">
                     <Selector
                         category="signature"
                         isSelected
@@ -87,6 +88,28 @@ class GearSelection extends React.Component {
                     <Selector
                         category="skill"
                     />
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#statsModal">
+                    View Stats
+                </button>
+                
+                <div class="modal fade" id="statsModal" role="dialog" aria-labelledby="statsModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="statsModalLabel">Stats</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <Stats/>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </>
         );

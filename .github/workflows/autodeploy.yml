@@ -1,16 +1,14 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Autodeploy
 
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
-  build:
+  build_deploy:
 
     runs-on: ubuntu-latest
 
@@ -25,6 +23,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-#    - run: npm run deploy
+    - run: npm run build
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.
       env:
         CI: true

@@ -86,7 +86,7 @@ const weaponTaletsIcons = {
 
 function Selector(props) {
     return (
-        <div className={`card ${props.category}`} id={props.category}>
+        <div className={`holo-card ${props.category}`} id={props.category}>
             { props.weaponType && (
                 <img className="icon" src={weaponIcons[props.weaponType]} alt={props.category}/>
             )}
@@ -137,7 +137,7 @@ Selector.defaultProps={
 
 export function WeaponCard(props) {
     return (
-        <div className={`card weapon`} id={"weapon"} onClick={
+        <div className={`holo-card weapon`} id={"weapon"} onClick={
             ()=>{
                 if(props.weapon.name !== ""){
                     alert("test") //Update existing weapon

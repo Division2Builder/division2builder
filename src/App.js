@@ -1,17 +1,24 @@
 import React from 'react';
 import GearSelection from './components/gearGrid'
-import './App.css';
+import './App.scss';
 import Background from './components/shared/background.png'
+import Sidebar from "./components/sidebar";
+import {Row} from "react-bootstrap";
 
 function App() {
-  return (
-    <div className="App" style={style}>
-      <GearSelection/>
-    </div>
-  );
+    return (
+        <div className="App" style={style}>
+            <div className="container">
+                <Row>
+                    <Sidebar/>
+                    <GearSelection/>
+                </Row>
+            </div>
+        </div>
+    );
 }
 
-var style = {
+const style = {
   backgroundImage: `url(${Background})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover'
