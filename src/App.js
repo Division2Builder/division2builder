@@ -19,9 +19,9 @@ function App() {
 }
 
 const style = {
-    backgroundImage: `url(${Background})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover'
+  backgroundImage: `url(${Background})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover'
 };
 
 export default App;

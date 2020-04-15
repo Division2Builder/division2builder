@@ -1,4 +1,5 @@
 import React from 'react';
+import Stats from './stats.js'
 import Mask from '../icons/gear_types/mask.png'
 import Backpack from '../icons/gear_types/backpack.png'
 import Vest from '../icons/gear_types/vest.png'
@@ -56,6 +57,29 @@ function GearSelection() {
             </div>
             <div className="holo-card skill" >
                 <span className="unselected">Select a skill</span>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#statsModal">
+                View Stats
+            </button>
+            
+            <div class="modal fade" id="statsModal" role="dialog" aria-labelledby="statsModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="statsModalLabel">Stats</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <Stats/>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
