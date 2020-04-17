@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Col, Row} from 'react-bootstrap';
 import './stats.scss'
+import statSections from './shared/statData'
 import Vest from '../icons/gear_types/vest.png'
 import Breakdown from './breakdown';
 import StatSection from './statSection';
@@ -20,14 +21,15 @@ function Stats() {
                     <a href="#ss2"><img className="sectionIcon" src={Vest} alt="Skill Slot 2"/></a>
                 </Col>
                 <Col className="grid statValuesGrid">
-                    <StatSection name="Weapon Talents" id="weaponTalents"/>
-                    <StatSection name="Weapon Stats" id="weaponStats"/>
-                    <StatSection name="Offense" id="offense"/>
-                    <StatSection name="Gear Talents" id="gearTalents"/>
-                    <StatSection name="Gear Brands" id="gearBrands"/>
-                    <StatSection name="Defense" id="defense"/>
-                    <StatSection name="Skill Slot 1" id="ss1"/>
-                    <StatSection name="Skill Slot 2" id="ss2"/>
+                    {statSections.map((statSection, index) => (
+                        <div key={index}>
+                            <StatSection
+                                id={statSection.id} 
+                                name={statSection.name}
+                                stats={statSection.stats}
+                            />
+                        </div>
+                    ))}
                 </Col>
                 <Col className="grid statBreakdownGrid">
                     <Breakdown/>

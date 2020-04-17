@@ -5,18 +5,12 @@ function StatSection(props) {
     return (
         <div id={props.id} className="statSection">
             <h6>{props.name}</h6>
-            <div className="stat">
-                <span className="statAmount">123,456</span>
-                <span className="statName">Stat Name</span>
-            </div>
-            <div className="stat">
-                <span className="statAmount">123,456</span>
-                <span className="statName">Stat Name</span>
-            </div>
-            <div className="stat">
-                <span className="statAmount">123,456</span>
-                <span className="statName">Stat Name</span>
-            </div>
+            {props.stats.map((stat, index) => (
+                <div key={index} className="stat">
+                    <span className="statAmount">{stat.statValue}</span>
+                    <span className="statName">{stat.statValue}</span>
+                </div>
+            ))}
         </div>
     );
 }
