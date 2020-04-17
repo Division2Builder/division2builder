@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Modal, Button, Row, Col} from 'react-bootstrap';
 import Mask from '../../icons/gear_types/mask.png';
 import Backpack from '../../icons/gear_types/backpack.png';
 import Vest from '../../icons/gear_types/vest.png';
@@ -136,29 +137,54 @@ Selector.defaultProps={
 }
 
 export function WeaponCard(props) {
+    const [show, setShow] = React.useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
-        <div className={`holo-card weapon`} id={"weapon"} onClick={
-            ()=>{
-                if(props.weapon.name !== ""){
-                    alert("test") //Update existing weapon
-                } else {
-                    alert("test1") //Create new weapon
+        <>
+            <div className={`holo-card weapon`} id={"weapon"} onClick={handleShow}>
+                {
+                    props.weapon.name !== "" ? (
+                        <>
+                            <img className="icon" src={weaponIcons[props.weapon.type]} alt={props.category}/>
+                            <span className={`name ${props.weapon.isNamed && 'named'}`}>{props.weapon.name}</span><br/>
+                            <span className="damage">{props.damage}</span>
+                            <img className="talentIcon" src={weaponTaletsIcons[props.weapon.talent.icon]} alt={props.weapon.talent.icon}/>
+                        </>
+                    ):(
+                        <span className="unselected">Select an weapon</span>
+                    )
                 }
-            }}>
-            {
-                props.weapon.name !== "" ? (
-                    <>
-                        <img className="icon" src={weaponIcons[props.weapon.type]} alt={props.category}/>
-                        <span className={`name ${props.weapon.isNamed && 'named'}`}>{props.weapon.name}</span><br/>
-                        <span className="damage">{props.damage}</span>
-                        <img className="talentIcon" src={weaponTaletsIcons[props.weapon.talent.icon]} alt={props.weapon.talent.icon}/>
-                    </>
-                ):(
-                    <span className="unselected">Select an weapon</span>
-                )
-            }
-            
-        </div>
+                
+            </div>
+            <Modal show={show} onHide={handleClose} centered size="lg">
+                <Modal.Header closeButton>
+                    <Modal.Title>{props.weapon.name ? (<>Modal heading</>) : (<>somethign else</>)}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Row>
+                        <Col class="col-md-2">
+                            {Object.keys(weaponIcons).map((keyName, keyValue) => {
+                                return (
+                                    <img className='icon' src={weaponIcons[keyName]} alt={keyName}/>
+                                )
+                            })}
+                        </Col>
+                        <Col class="col-md-10">Weapons</Col>
+                    </Row>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
     )
 }
 
