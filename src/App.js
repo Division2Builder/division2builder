@@ -10,14 +10,14 @@ class App extends React.Component {
         super(props);
         this.state = {
             majorAttributes: {
-                red: 3,
-                blue: 1,
-                yellow: 2
+                offensive: 3,
+                defensive: 1,
+                utility: 2
             },
             minorAttributes: {
-                red: 8,
-                blue: 3,
-                yellow: 4
+                offensive: 8,
+                defensive: 3,
+                utility: 4
             },
             armor: '203.6k',
             health: '127.8k'

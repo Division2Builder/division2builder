@@ -2,9 +2,12 @@ import React, {useEffect} from 'react';
 import Chart from 'chart.js';
 
 import './sidebar.scss';
-import RedIcon from '../icons/attrs/red.png';
-import YellowIcon from '../icons/attrs/yellow.png';
-import BlueIcon from '../icons/attrs/blue.png';
+import OffensiveMajorIcon from '../icons/attrs/offensiveMajor.png';
+import OffensiveMinorIcon from '../icons/attrs/offensiveMinor.png';
+import DefensiveMajorIcon from '../icons/attrs/defensiveMajor.png';
+import DefensiveMinorIcon from '../icons/attrs/defensiveMinor.png';
+import UtilityMajorIcon from '../icons/attrs/utilityMajor.png';
+import UtilityMinorIcon from '../icons/attrs/utilityMinor.png';
 import {Col, Row} from 'react-bootstrap';
 
 const red = '#ED4040';
@@ -14,12 +17,12 @@ const transparent = '#00000000';
 
 export default function Sidebar(props) {
     let filledSkillCells = [];
-    for(let i = 0; i < props.majorAttributes.yellow; i++) {
+    for(let i = 0; i < props.majorAttributes.utility; i++) {
         filledSkillCells.push(<Col className="skillCell filled"/>);
     }
 
     let emptySkillCells = [];
-    for(let i = props.majorAttributes.yellow; i < 6; i++) {
+    for(let i = props.majorAttributes.utility; i < 6; i++) {
         emptySkillCells.push(<Col className="skillCell"/>);
     }
 
@@ -30,12 +33,12 @@ export default function Sidebar(props) {
             data: {
                 datasets: [{
                     data: [
-                        props.minorAttributes.red,
-                        props.majorAttributes.red,
-                        props.minorAttributes.blue,
-                        props.majorAttributes.blue,
-                        props.minorAttributes.yellow,
-                        props.majorAttributes.yellow
+                        props.minorAttributes.offensive,
+                        props.majorAttributes.offensive,
+                        props.minorAttributes.defensive,
+                        props.majorAttributes.defensive,
+                        props.minorAttributes.utility,
+                        props.majorAttributes.utility
                     ],
                     backgroundColor: [red, transparent, blue, transparent, yellow, transparent],
                     borderColor: [red, red, blue, blue, yellow, yellow],
@@ -55,30 +58,30 @@ export default function Sidebar(props) {
             <div className="attrsSection col-xs-12 row lineBelow">
                 <Col>
                     <Row className="align-items-center">
-                        <img src={RedIcon} alt="Red" className="attrsIcon col-xs-3"/>
-                        <div className="col-xs-3">{props.majorAttributes.red}</div>
+                        <img src={OffensiveMajorIcon} alt="Red" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">{props.majorAttributes.offensive}</div>
                     </Row>
                     <Row className="align-items-center">
-                        <img src={BlueIcon} alt="Blue" className="attrsIcon col-xs-3"/>
-                        <div className="col-xs-3">{props.majorAttributes.blue}</div>
+                        <img src={DefensiveMajorIcon} alt="Blue" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">{props.majorAttributes.defensive}</div>
                     </Row>
                     <Row className="align-items-center">
-                        <img src={YellowIcon} alt="Yellow" className="attrsIcon col-xs-3"/>
-                        <div className="col-xs-3">{props.majorAttributes.yellow}</div>
+                        <img src={UtilityMajorIcon} alt="Yellow" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">{props.majorAttributes.utility}</div>
                     </Row>
                 </Col>
                 <Col>
                     <Row className="align-items-center">
-                        <img src={RedIcon} alt="Red" className="attrsIcon col-xs-3"/>
-                        <div className="col-xs-3">{props.minorAttributes.red}</div>
+                        <img src={OffensiveMinorIcon} alt="Red" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">{props.minorAttributes.offensive}</div>
                     </Row>
                     <Row className="align-items-center">
-                        <img src={BlueIcon} alt="Blue" className="attrsIcon col-xs-3"/>
-                        <div className="col-xs-3">{props.minorAttributes.blue}</div>
+                        <img src={DefensiveMinorIcon} alt="Blue" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">{props.minorAttributes.defensive}</div>
                     </Row>
                     <Row className="align-items-center">
-                        <img src={YellowIcon} alt="Yellow" className="attrsIcon col-xs-3"/>
-                        <div className="col-xs-3">{props.minorAttributes.yellow}</div>
+                        <img src={UtilityMinorIcon} alt="Yellow" className="attrsIcon col-xs-3"/>
+                        <div className="col-xs-3">{props.minorAttributes.utility}</div>
                     </Row>
                 </Col>
             </div>
@@ -91,7 +94,7 @@ export default function Sidebar(props) {
             <Col xs={12} className="skillTier">
                 <p>Skill Tier</p>
                 <Row>
-                    <img src={YellowIcon} alt="Yellow" className="attrsIcon col-xs-1" align="bottom"/>
+                    <img src={UtilityMajorIcon} alt="Yellow" className="attrsIcon col-xs-1" align="bottom"/>
                     {filledSkillCells}
                     {emptySkillCells}
                 </Row>
