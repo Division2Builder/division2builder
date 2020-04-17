@@ -1,10 +1,10 @@
 import React from 'react';
 import './statSection.scss'
 
-function StatSection() {
+function StatSection(props) {
     return (
-        <div id="statSection" className="statSection">
-            <h6>Section Name</h6>
+        <div id={props.id} className="statSection">
+            <h6>{props.name}</h6>
             <div className="stat">
                 <span className="statAmount">123,456</span>
                 <span className="statName">Stat Name</span>
