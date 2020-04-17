@@ -16,14 +16,13 @@ const yellow = '#E9C16B';
 const transparent = '#00000000';
 
 export default function Sidebar(props) {
-    let filledSkillCells = [];
-    for(let i = 0; i < props.majorAttributes.utility; i++) {
-        filledSkillCells.push(<Col className="skillCell filled"/>);
-    }
-
-    let emptySkillCells = [];
-    for(let i = props.majorAttributes.utility; i < 6; i++) {
-        emptySkillCells.push(<Col className="skillCell"/>);
+    let skillCells = [];
+    for (let i = 0; i < 6; i++) {
+        if (i < props.majorAttributes.utility) {
+            skillCells.push(<Col className="skillCell filled"/>);
+        } else {
+            skillCells.push(<Col className="skillCell"/>);
+        }
     }
 
     useEffect(() => {
@@ -95,8 +94,7 @@ export default function Sidebar(props) {
                 <p>Skill Tier</p>
                 <Row>
                     <img src={UtilityMajorIcon} alt="Yellow" className="attrsIcon col-xs-1" align="bottom"/>
-                    {filledSkillCells}
-                    {emptySkillCells}
+                    {skillCells}
                 </Row>
             </Col>
         </div>
