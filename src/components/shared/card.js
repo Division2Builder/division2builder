@@ -37,6 +37,7 @@ import SteadyHanded from '../../icons/weapons/talents/Steady Handed.png'
 import Strained from '../../icons/weapons/talents/Strained.png'
 import Vindictive from '../../icons/weapons/talents/Vindictive.png'
 import './selector.css';
+import weaponData from './weaponData';
 
 const armorIcons = {
     mask: Mask,
@@ -165,14 +166,35 @@ export function WeaponCard(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <Row>
-                        <Col class="col-md-2">
+                        <Col>
                             {Object.keys(weaponIcons).map((keyName, keyValue) => {
                                 return (
-                                    <img className='icon' src={weaponIcons[keyName]} alt={keyName}/>
+                                    <img className='sectionIcon' src={weaponIcons[keyName]} alt={keyName}/>
                                 )
                             })}
                         </Col>
-                        <Col class="col-md-10">Weapons</Col>
+                        <Col lg={10} md="auto">
+                            {
+                                Object.keys(weaponIcons).map((keyname, keyvalue) => {
+                                    return (
+                                        <>
+                                            <div className="weaponSelectorTitle">{keyname}</div>
+                                            {
+                                                weaponData.filter((weapon) => {
+                                                    return weapon.class === keyname
+                                                }).sort((weapon1, weapon2) => {
+                                                    return weapon1.name.localeCompare(weapon2.name)
+                                                }).map((weapon) => {
+                                                    return (
+                                                        <div className={`weaponSelectorItem ${weapon.isNamed && 'named'} ${weapon.isExotic && 'exotic'}`}>{weapon.name}</div>
+                                                    )
+                                                })
+                                            }
+                                        </>
+                                    )
+                                })
+                            }
+                        </Col>
                     </Row>
                 </Modal.Body>
                 <Modal.Footer>

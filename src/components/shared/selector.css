@@ -59,6 +59,10 @@
     color: orange;
 }
 
+.exotic{
+    color: rgb(255, 94, 0);
+}
+
 .unselected{
     margin: auto;
 }
@@ -71,4 +75,14 @@
     float: right;
     height: 75px;
     margin: 5px;
+}
+
+.weaponSelectorTitle{
+    font-size: large;
+    font-weight: bolder;
+    border-bottom: 1px solid white;
+}
+
+.weaponSelectorItem:hover{
+    border: 1px solid white;
 }
