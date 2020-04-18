@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Button, Row, Col} from 'react-bootstrap';
+import {Modal, Button} from 'react-bootstrap';
 import Selector, {WeaponCard} from './shared/card';
 import './builder.scss'
 import Stats from './stats.js'
