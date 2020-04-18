@@ -86,3 +86,9 @@
 .weaponSelectorItem:hover{
     border: 1px solid white;
 }
+
+.weaponSelectorContainer{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    max-height: 500px;
+}

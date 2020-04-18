@@ -169,15 +169,15 @@ export function WeaponCard(props) {
                         <Col>
                             {Object.keys(weaponIcons).map((keyName, keyValue) => {
                                 return (
-                                    <img className='sectionIcon' src={weaponIcons[keyName]} alt={keyName}/>
+                                    <a href={`#${keyName}`}><img className='sectionIcon' src={weaponIcons[keyName]} alt={keyName}/></a>
                                 )
                             })}
                         </Col>
-                        <Col lg={10} md="auto">
+                        <Col lg={10} md="auto" className="weaponSelectorContainer">
                             {
                                 Object.keys(weaponIcons).map((keyname, keyvalue) => {
                                     return (
-                                        <>
+                                        <div className="weaponSelectorSection" id={keyname}>
                                             <div className="weaponSelectorTitle">{keyname}</div>
                                             {
                                                 weaponData.filter((weapon) => {
@@ -190,7 +190,7 @@ export function WeaponCard(props) {
                                                     )
                                                 })
                                             }
-                                        </>
+                                        </div>
                                     )
                                 })
                             }
