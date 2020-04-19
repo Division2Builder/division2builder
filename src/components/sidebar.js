@@ -18,11 +18,7 @@ const transparent = '#00000000';
 export default function Sidebar(props) {
     let skillCells = [];
     for (let i = 0; i < 6; i++) {
-        if (i < props.majorAttributes.utility) {
-            skillCells.push(<Col className="skillCell filled"/>);
-        } else {
-            skillCells.push(<Col className="skillCell"/>);
-        }
+        skillCells.push(<Col className={i < props.majorAttributes.utility ? "skillCell filled" : "skillCell"}/>);
     }
 
     useEffect(() => {
@@ -30,6 +26,14 @@ export default function Sidebar(props) {
         new Chart(ctx, {
             type: 'doughnut',
             data: {
+                labels: [
+                    "Offensive minor",
+                    "Offensive major",
+                    "Defensive minor",
+                    "Defensive major",
+                    "Utility minor",
+                    "Utility major",
+                ],
                 datasets: [{
                     data: [
                         props.minorAttributes.offensive,
@@ -44,7 +48,10 @@ export default function Sidebar(props) {
                 }]
             },
             options: {
-                cutoutPercentage: 90
+                cutoutPercentage: 90,
+                legend: {
+                    display: false
+                },
             }
         });
     });

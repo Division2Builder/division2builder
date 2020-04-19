@@ -1,74 +1,76 @@
-.specialization{
-    flex-grow: 2;
-    flex-basis: 75%;
+@import "src/colors";
+
+.specialization {
+  flex-grow: 2;
+  flex-basis: 75%;
 }
 
-.gernade{
-    flex-grow: 1;
-    flex-basis: 15%;
+.grenade {
+  flex-grow: 1;
+  flex-basis: 15%;
 }
 
-.weapon{
-    flex-grow: 2;
-    flex-basis: 35%;
+.weapon {
+  flex-grow: 2;
+  flex-basis: 35%;
 }
 
-.sidearm{
-    flex-grow: 1;
-    flex-basis: 15%;
+.sidearm {
+  flex-grow: 1;
+  flex-basis: 15%;
 }
 
-.armor{
-    flex-grow: 2;
-    flex-basis: 45%;
+.armor {
+  flex-grow: 1;
+  flex-basis: 45%;
 }
 
-.skill{
-    flex-grow: 2;
+.skill {
+  flex-grow: 1;
 }
 
-.card{
-    background-color: rgba(0, 0, 0, 0.55);
-    color: rgba(255, 255, 255, 1);
-    border-radius: 15px;
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
+.card {
+  background-color: $card-background;
+  color: $text-color;
+  border-radius: 15px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.card:hover{
-    background-color: rgba(0, 0, 0, 0.7);
+.card:hover {
+  background-color: $card-background-hover;
 }
 
-.icon{
-    float: left;
-    margin: 5px;
-    height: 100px;
+.icon {
+  float: left;
+  margin: 5px;
+  height: 100px;
 }
 
-.weapon .icon{
-    height: 75px;
+.weapon .icon {
+  height: 75px;
 }
 
-.name{
-    float: left;
-    font-size: medium;
+.unselected {
+  margin: auto;
 }
 
-.named{
-    color: orange;
+.specializationName {
+  font-size: xx-large;
 }
 
-.unselected{
-    margin: auto;
+.talentIcon {
+  float: right;
+  height: 75px;
+  margin: 5px;
 }
 
-.specializationName{
-    font-size: xx-large;
+.name {
+  float: left;
+  font-size: medium;
 }
 
-.talentIcon{
-    float: right;
-    height: 75px;
-    margin: 5px;
+.named {
+  color: $orange;
 }
