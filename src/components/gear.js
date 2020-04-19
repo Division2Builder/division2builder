@@ -1,10 +1,10 @@
 import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
 import Selector, {WeaponCard} from './shared/card';
-import './builder.scss'
+import './gear.scss'
 import Stats from './stats.js'
 
-class GearGrid extends React.Component {
+class Gear extends React.Component {
     state={
         itemClicked: "",
         primary: {
@@ -122,5 +122,4 @@ class GearGrid extends React.Component {
     }
 }
     
-export default GearGrid;
-    
+export default Gear;
