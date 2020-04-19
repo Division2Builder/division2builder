@@ -1,5 +1,5 @@
 import React from 'react';
-import GearSelection from './components/gearSelection'
+import GearGrid from './components/gearGrid'
 import './App.scss';
 import Background from './components/shared/background.png'
 import Sidebar from "./components/sidebar";
@@ -35,7 +35,7 @@ class App extends React.Component {
                             armor={this.state.armor}
                             health={this.state.health}
                         />
-                        <GearSelection/>
+                        <GearGrid/>
                     </Row>
                 </div>
             </div>
