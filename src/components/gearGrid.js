@@ -5,43 +5,19 @@ import './builder.scss'
 import Stats from './stats.js'
 
 class GearGrid extends React.Component {
-    state={
-        itemClicked: "",
-        primary: {
-            name: "Baker's Dozen",
-            type: "rifle",
-            damage: 235060,
-            talent: {
-                name: "Perfect Lucky Shot", 
-                desc: "Magazine capacity is increased by 30%. Missed shots from cover have a 100% chance to return to the magazine.", 
-                icon: "luckyshot"
-            },
-            isNamed: true
-        },
-        secondary: {
-            name: "",
-            type: "",
-            damage: 0,
-            talent: {
-                name: "", 
-                desc: "", 
-                icon: ""
-            },
-            isNamed: false
-        },
-    }
+    constructor(props){
+        super(props)
+        this.state = {
+            show: false
+        }
+    };
+    
+    handleClose = () => {this.setState({show:false})};
+    handleShow = () => {this.setState({show:true})};
 
-    gearGrid(props) {
-        const [show, setShow] = React.useState(false);
-
-        const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
-
+    render() {
         return (
             <>
-                {props.state.itemClicked !== "" && (
-                    <div></div>
-                )}
                 <div className="createBuildGrid col-xs-12 col-lg-9 row">
                     <Selector
                         category="signature"
@@ -52,12 +28,14 @@ class GearGrid extends React.Component {
                         category="grenade"
                     />
                     <WeaponCard
-                        weapon={props.state.primary}
+                        weapon={this.props.primary}
                         context="primary"
+                        updateWeapon={this.props.updateWeapon}
                     />
                     <WeaponCard
-                        weapon={props.state.secondary}
+                        weapon={this.props.secondary}
                         context="secondary"
+                        updateWeapon={this.props.updateWeapon}
                     />
                     <Selector
                         category="sidearm"
@@ -96,11 +74,11 @@ class GearGrid extends React.Component {
                     />
                 </div>
                 
-                <Button variant="primary" onClick={handleShow}>
+                <Button variant="primary" onClick={this.handleShow}>
                     View Stats
                 </Button>
 
-                <Modal show={show} onHide={handleClose} centered size="xl">
+                <Modal show={this.state.show} onHide={this.handleClose} centered size="xl">
                     <Modal.Header closeButton>
                         <Modal.Title>Stats</Modal.Title>
                     </Modal.Header>
@@ -108,17 +86,13 @@ class GearGrid extends React.Component {
                         <Stats/>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button variant="secondary" onClick={this.handleClose}>
                             Close
                         </Button>
                     </Modal.Footer>
                 </Modal>
             </>
         );
-    }
-
-    render() {
-        return (<this.gearGrid state={this.state}/>);
     }
 }
     

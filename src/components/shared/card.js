@@ -181,12 +181,15 @@ export function WeaponCard(props) {
                                             <div className="weaponSelectorTitle">{keyname}</div>
                                             {
                                                 weaponData.filter((weapon) => {
-                                                    return weapon.class === keyname
+                                                    return weapon.type === keyname
                                                 }).sort((weapon1, weapon2) => {
                                                     return weapon1.name.localeCompare(weapon2.name)
                                                 }).map((weapon) => {
                                                     return (
-                                                        <div className={`weaponSelectorItem ${weapon.isNamed && 'named'} ${weapon.isExotic && 'exotic'}`}>{weapon.name}</div>
+                                                        <div className={`weaponSelectorItem ${weapon.isNamed && 'named'} ${weapon.isExotic && 'exotic'}`} onClick={() => {
+                                                            props.updateWeapon(weapon, props.context);
+                                                            handleClose();
+                                                        }}>{weapon.name}</div>
                                                     )
                                                 })
                                             }

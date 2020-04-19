@@ -1,290 +1,426 @@
 export default [
     {
         name: "Baker's Dozen",
-        class: "rifle",
+        type: "rifle",
         damage: 235060,
         isNamed: true,
         isExotic: false,
         rpm: 180,
         mag: 10,
-        reload: 3.0, 
-        talent: "Perfect Lucky Shot"
+        reload: 3.0,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Eagle Bearer",
-        class: "assault",
+        type: "assault",
         damage: 47952,
         isNamed: false,
         isExotic: true,
         rpm: 750,
         mag: 30,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Merciless",
-        class: "rifle",
+        type: "rifle",
         damage: 75219,
         isNamed: false,
         isExotic: true,
         rpm: 400,
         mag: 30,
-        reload: 2.5
+        reload: 2.5,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Everlasting Gaze",
-        class: "rifle",
+        type: "rifle",
         damage: 131633,
         isNamed: true,
         isExotic: false,
         rpm: 275,
         mag: 20,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Artist's Tool",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: true,
         isExotic: false,
         rpm: 320,
         mag: 20,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "SIG 716",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "SIG 716 Replica",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Baker's Dozen",
-        class: "rifle",
+        type: "rifle",
         damage: 235060,
         isNamed: true,
         isExotic: false,
         rpm: 180,
         mag: 10,
-        reload: 3.0, 
-        talent: "Perfect Lucky Shot"
+        reload: 3.0,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Eagle Bearer",
-        class: "assault",
+        type: "assault",
         damage: 47952,
         isNamed: false,
         isExotic: true,
         rpm: 750,
         mag: 30,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Merciless",
-        class: "rifle",
+        type: "rifle",
         damage: 75219,
         isNamed: false,
         isExotic: true,
         rpm: 400,
         mag: 30,
-        reload: 2.5
+        reload: 2.5,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Everlasting Gaze",
-        class: "rifle",
+        type: "rifle",
         damage: 131633,
         isNamed: true,
         isExotic: false,
         rpm: 275,
         mag: 20,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Artist's Tool",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: true,
         isExotic: false,
         rpm: 320,
         mag: 20,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "SIG 716",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "SIG 716 Replica",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },{
         name: "Baker's Dozen",
-        class: "rifle",
+        type: "rifle",
         damage: 235060,
         isNamed: true,
         isExotic: false,
         rpm: 180,
         mag: 10,
-        reload: 3.0, 
-        talent: "Perfect Lucky Shot"
+        reload: 3.0,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Eagle Bearer",
-        class: "assault",
+        type: "assault",
         damage: 47952,
         isNamed: false,
         isExotic: true,
         rpm: 750,
         mag: 30,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Merciless",
-        class: "rifle",
+        type: "rifle",
         damage: 75219,
         isNamed: false,
         isExotic: true,
         rpm: 400,
         mag: 30,
-        reload: 2.5
+        reload: 2.5,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Everlasting Gaze",
-        class: "rifle",
+        type: "rifle",
         damage: 131633,
         isNamed: true,
         isExotic: false,
         rpm: 275,
         mag: 20,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "Artist's Tool",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: true,
         isExotic: false,
         rpm: 320,
         mag: 20,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "SIG 716",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "eyeless"
+        },
     },
     {
         name: "SIG 716 Replica",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "reformation"
+        },
     },
     {
         name: "Baker's Dozen",
-        class: "rifle",
+        type: "rifle",
         damage: 235060,
         isNamed: true,
         isExotic: false,
         rpm: 180,
         mag: 10,
         reload: 3.0, 
-        talent: "Perfect Lucky Shot"
+        talent: {
+            name: "Perfect Lucky Shot", 
+            desc: "TEMP", 
+            icon: "luckyshot"
+        },
     },
     {
         name: "Eagle Bearer",
-        class: "assault",
+        type: "assault",
         damage: 47952,
         isNamed: false,
         isExotic: true,
         rpm: 750,
         mag: 30,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "killer"
+        },
     },
     {
         name: "Merciless",
-        class: "rifle",
+        type: "rifle",
         damage: 75219,
         isNamed: false,
         isExotic: true,
         rpm: 400,
         mag: 30,
-        reload: 2.5
+        reload: 2.5,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "spike"
+        },
     },
     {
         name: "Everlasting Gaze",
-        class: "rifle",
+        type: "rifle",
         damage: 131633,
         isNamed: true,
         isExotic: false,
         rpm: 275,
         mag: 20,
-        reload: 2.2
+        reload: 2.2,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "sadist"
+        },
     },
     {
         name: "Artist's Tool",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: true,
         isExotic: false,
         rpm: 320,
         mag: 20,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "rifleman"
+        },
     },
     {
         name: "SIG 716",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "ranger"
+        },
     },
     {
         name: "SIG 716 Replica",
-        class: "rifle",
+        type: "rifle",
         damage: 91673,
         isNamed: false,
         isExotic: false,
         rpm: 320,
         mag: 30,
-        reload: 2.4
+        reload: 2.4,
+        talent: {
+            name: "Bread Baskey", 
+            desc: "TEMP", 
+            icon: "breadbasket"
+        },
     },
     {
         name: "",
-        class: "",
+        type: "",
         damage: 0,
         isNamed: false,
         isExotic: false,
