@@ -4,7 +4,7 @@ import Selector, {WeaponCard} from './shared/card';
 import './builder.scss'
 import Stats from './stats.js'
 
-class GearSelection extends React.Component {
+class GearGrid extends React.Component {
     state={
         itemClicked: "",
         primary: {
@@ -49,7 +49,7 @@ class GearSelection extends React.Component {
                         specialization="sharpshooter"
                     />
                     <Selector
-                        category="gernade"
+                        category="grenade"
                     />
                     <WeaponCard
                         weapon={props.state.primary}
@@ -122,5 +122,5 @@ class GearSelection extends React.Component {
     }
 }
     
-export default GearSelection;
+export default GearGrid;
     
