@@ -1,22 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './statSection.scss'
+import DetailedStat from './detailedStat';
 
-function StatSection() {
+function StatSection(props) {
+    const [chosen, setChosen] = useState();
+
     return (
-        <div id="statSection" className="statSection">
-            <h6>Section Name</h6>
-            <div className="stat">
-                <span className="statAmount">123,456</span>
-                <span className="statName">Stat Name</span>
-            </div>
-            <div className="stat">
-                <span className="statAmount">123,456</span>
-                <span className="statName">Stat Name</span>
-            </div>
-            <div className="stat">
-                <span className="statAmount">123,456</span>
-                <span className="statName">Stat Name</span>
-            </div>
+        <div id={props.id} className="statSection">
+            <h6>{props.name}</h6>
+            {props.stats.map((stat, index) => (
+                <DetailedStat
+                    key={index}
+                    stat = {stat}
+                    active={index === chosen}
+                    onClick={() => setChosen(index)}
+                />
+            ))}
         </div>
     );
 }
