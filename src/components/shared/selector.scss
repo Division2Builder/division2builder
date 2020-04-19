@@ -60,10 +60,12 @@
   font-size: xx-large;
 }
 
-.talentIcon {
-  float: right;
-  height: 75px;
-  margin: 5px;
+.exotic{
+    color: $exotic;
+}
+
+.unselected{
+    margin: auto;
 }
 
 .name {
@@ -71,6 +73,27 @@
   font-size: medium;
 }
 
+.talentIcon{
+    float: right;
+    height: 75px;
+    margin: 5px;
+}
+
+.weaponSelectorTitle{
+    font-size: large;
+    font-weight: bolder;
+    border-bottom: 1px solid white;
+}
+
+.weaponSelectorItem:hover{
+    border: 1px solid white;
+}
+
+.weaponSelectorContainer{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    max-height: 500px;
+}
 .named {
   color: $orange;
 }

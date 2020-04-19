@@ -36,6 +36,7 @@ import Spike from '../../icons/weapons/talents/Spike.png'
 import SteadyHanded from '../../icons/weapons/talents/Steady Handed.png'
 import Strained from '../../icons/weapons/talents/Strained.png'
 import Vindictive from '../../icons/weapons/talents/Vindictive.png'
+import weaponData from './weaponData';
 import './selector.scss';
 
 const armorIcons = {
@@ -149,7 +150,7 @@ export function WeaponCard(props) {
                     props.weapon.name !== "" ? (
                         <>
                             <img className="icon" src={weaponIcons[props.weapon.type]} alt={props.category}/>
-                            <span className={`name ${props.weapon.isNamed && 'named'}`}>{props.weapon.name}</span><br/>
+                            <span className={`name ${props.weapon.isNamed && 'named'} ${props.weapon.isExotic && 'exotic'}`}>{props.weapon.name}</span><br/>
                             <span className="damage">{props.damage}</span>
                             <img className="talentIcon" src={weaponTaletsIcons[props.weapon.talent.icon]} alt={props.weapon.talent.icon}/>
                         </>
@@ -165,14 +166,38 @@ export function WeaponCard(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <Row>
-                        <Col class="col-md-2">
+                        <Col>
                             {Object.keys(weaponIcons).map((keyName, keyValue) => {
                                 return (
-                                    <img className='icon' src={weaponIcons[keyName]} alt={keyName}/>
+                                    <a href={`#${keyName}`}><img className='sectionIcon' src={weaponIcons[keyName]} alt={keyName}/></a>
                                 )
                             })}
                         </Col>
-                        <Col class="col-md-10">Weapons</Col>
+                        <Col lg={10} md="auto" className="weaponSelectorContainer">
+                            {
+                                Object.keys(weaponIcons).map((keyname, keyvalue) => {
+                                    return (
+                                        <div className="weaponSelectorSection" id={keyname}>
+                                            <div className="weaponSelectorTitle">{keyname}</div>
+                                            {
+                                                weaponData.filter((weapon) => {
+                                                    return weapon.type === keyname
+                                                }).sort((weapon1, weapon2) => {
+                                                    return weapon1.name.localeCompare(weapon2.name)
+                                                }).map((weapon) => {
+                                                    return (
+                                                        <div className={`weaponSelectorItem ${weapon.isNamed && 'named'} ${weapon.isExotic && 'exotic'}`} onClick={() => {
+                                                            props.updateWeapon(weapon, props.context);
+                                                            handleClose();
+                                                        }}>{weapon.name}</div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    )
+                                })
+                            }
+                        </Col>
                     </Row>
                 </Modal.Body>
                 <Modal.Footer>
