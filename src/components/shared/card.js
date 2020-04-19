@@ -36,8 +36,8 @@ import Spike from '../../icons/weapons/talents/Spike.png'
 import SteadyHanded from '../../icons/weapons/talents/Steady Handed.png'
 import Strained from '../../icons/weapons/talents/Strained.png'
 import Vindictive from '../../icons/weapons/talents/Vindictive.png'
-import './selector.css';
 import weaponData from './weaponData';
+import './selector.scss';
 
 const armorIcons = {
     mask: Mask,
