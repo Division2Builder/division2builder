@@ -150,7 +150,7 @@ export function WeaponCard(props) {
                     props.weapon.name !== "" ? (
                         <>
                             <img className="icon" src={weaponIcons[props.weapon.type]} alt={props.category}/>
-                            <span className={`name ${props.weapon.isNamed && 'named'}`}>{props.weapon.name}</span><br/>
+                            <span className={`name ${props.weapon.isNamed && 'named'} ${props.weapon.isExotic && 'exotic'}`}>{props.weapon.name}</span><br/>
                             <span className="damage">{props.damage}</span>
                             <img className="talentIcon" src={weaponTaletsIcons[props.weapon.talent.icon]} alt={props.weapon.talent.icon}/>
                         </>
