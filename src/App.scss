@@ -27,11 +27,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $text-color;
 }
 
 .App-link {
-  color: #61dafb;
+  color: $light-blue;
 }
 
 @keyframes App-logo-spin {
@@ -44,27 +44,27 @@
 }
 
 .holo-card {
-  background-color: rgba(0, 0, 0, 0.55);
-  color: rgba(255, 255, 255, 1);
+  background-color: $card-background;
+  color: $text-color;
   border-radius: 15px;
   margin: 5px;
 }
 
 .holo-card:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: $card-background-hover;
 }
 
 // Below modifies bootstrap modal.
 // !important is needed for this to ensure override.
 .modal-content {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  color: white !important;
+  background-color: $modal-background !important;
+  color: $text-color !important;
 }
 
 .modal-header {
-  border-bottom: 1px solid black !important;
+  border-bottom: 1px solid $black !important;
 }
 
 .modal-footer {
-  border-top: 1px solid black !important;
+  border-top: 1px solid $black !important;
 }
