@@ -1,9 +1,11 @@
+@import 'src/colors';
+
 .sidebarGrid > * {
   padding: 10px;
 }
 
 .lineBelow {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid $light-gray;
 }
 
 .skillsCircle {
@@ -26,11 +28,10 @@
 }
 
 .skillCell {
-  border: 2px solid lightgray;
-  background: gray;
+  border: 2px solid $light-gray;
   height: 1em;
 }
 
 .filled {
-  background: #E9C16B;
+  background: $yellow;
 }

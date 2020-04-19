@@ -1,3 +1,5 @@
+@import "src/colors";
+
 .statsGrid {
     padding: 5px;
     justify-content: space-between;
@@ -8,7 +10,7 @@
 }
 
 .sectionSelectionGrid {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: $card-background;
     padding: 10px;
     border-radius: 15px;
     margin: 5px;
@@ -22,11 +24,11 @@
 }
 
 .sectionIcon:hover {
-    background-color: rgba(95, 95, 95, 0.55);
+    background-color: $section-hover;
 }
 
 .statValuesGrid {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: $card-background;
     padding: 10px;
     justify-content: space-evenly;
     border-radius: 15px;
@@ -36,7 +38,7 @@
 }
 
 .statBreakdownGrid {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: $card-background;
     border-radius: 15px;
     margin: 5px;
 }

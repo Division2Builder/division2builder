@@ -1,16 +1,18 @@
+@import "src/colors";
+
 .statSection {
     display: flex;
     flex-direction: column;
 }
 
 .stat {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: $card-background;
     border-radius: 15px;
     margin: 5px;
 }
 
 .stat:hover {
-    background-color: rgba(95, 95, 95, 0.55);
+    background-color: $section-hover;
 }
 
 .statAmount {
@@ -29,5 +31,5 @@
 }
 
 .active {
-    background-color: rgba(95, 95, 95, 0.55);
+    background-color: $section-hover;
 }
