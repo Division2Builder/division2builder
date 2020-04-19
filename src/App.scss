@@ -1,3 +1,5 @@
+@import "colors";
+
 * {
   font-family: Borda, sans-serif;
 }
@@ -54,15 +56,15 @@
 
 // Below modifies bootstrap modal.
 // !important is needed for this to ensure override.
-.modal-content{
+.modal-content {
   background-color: rgba(0, 0, 0, 0.9) !important;
   color: white !important;
 }
 
-.modal-header{
-  border-bottom: 1px solid black !important; 
+.modal-header {
+  border-bottom: 1px solid black !important;
 }
 
-.modal-footer{
+.modal-footer {
   border-top: 1px solid black !important;
 }

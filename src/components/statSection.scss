@@ -1,35 +1,35 @@
 @import "src/colors";
 
 .statSection {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .stat {
-    background-color: $card-background;
-    border-radius: 15px;
-    margin: 5px;
+  background-color: $card-background;
+  border-radius: 15px;
+  margin: 5px;
 }
 
 .stat:hover {
-    background-color: $section-hover;
+  background-color: $section-hover;
 }
 
 .statAmount {
-    padding-left: 10px;
-    float: left;
-    font-size: medium;
-    font-weight: bold;
-    color: orange;
+  padding-left: 10px;
+  float: left;
+  font-size: medium;
+  font-weight: bold;
+  color: orange;
 }
 
 .statName {
-    padding-left: 20px;
-    padding-right: 40px;
-    float: right;
-    font-size: medium;
+  padding-left: 20px;
+  padding-right: 40px;
+  float: right;
+  font-size: medium;
 }
 
 .active {
-    background-color: $section-hover;
+  background-color: $section-hover;
 }

@@ -44,7 +44,7 @@ class Gear extends React.Component {
                 )}
                 <div className="createBuildGrid col-xs-12 col-lg-9 row">
                     <Selector
-                        category="signature"
+                        category="specialization"
                         isSelected
                         specialization="sharpshooter"
                     />
