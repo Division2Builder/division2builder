@@ -120,7 +120,7 @@ Selector.propTypes={
     isSelected: PropTypes.bool,
     isNamed: PropTypes.bool,
     category: PropTypes.oneOf(['weapon', 'armor', 'sidearm', 'signature', 
-                               'gernade', 'skill']).isRequired,
+                               'grenade', 'skill']).isRequired,
     name: PropTypes.string,
     armorPiece: PropTypes.oneOf(['mask', 'backpack', 'vest', 'glove', 'holster', 
                                  'kneepads']),
