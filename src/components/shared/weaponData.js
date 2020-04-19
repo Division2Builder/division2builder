@@ -9,7 +9,7 @@ export default [
         mag: 10,
         reload: 3.0,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -24,7 +24,7 @@ export default [
         mag: 30,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -39,7 +39,7 @@ export default [
         mag: 30,
         reload: 2.5,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -54,7 +54,7 @@ export default [
         mag: 20,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -69,7 +69,7 @@ export default [
         mag: 20,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -84,7 +84,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -99,7 +99,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -114,7 +114,7 @@ export default [
         mag: 10,
         reload: 3.0,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -129,7 +129,7 @@ export default [
         mag: 30,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -144,7 +144,7 @@ export default [
         mag: 30,
         reload: 2.5,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -159,7 +159,7 @@ export default [
         mag: 20,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -174,7 +174,7 @@ export default [
         mag: 20,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -189,7 +189,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -204,7 +204,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -218,7 +218,7 @@ export default [
         mag: 10,
         reload: 3.0,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -233,7 +233,7 @@ export default [
         mag: 30,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -248,7 +248,7 @@ export default [
         mag: 30,
         reload: 2.5,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -263,7 +263,7 @@ export default [
         mag: 20,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -278,7 +278,7 @@ export default [
         mag: 20,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
@@ -293,7 +293,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "eyeless"
         },
@@ -308,7 +308,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "reformation"
         },
@@ -338,7 +338,7 @@ export default [
         mag: 30,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "killer"
         },
@@ -353,7 +353,7 @@ export default [
         mag: 30,
         reload: 2.5,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "spike"
         },
@@ -368,7 +368,7 @@ export default [
         mag: 20,
         reload: 2.2,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "sadist"
         },
@@ -383,7 +383,7 @@ export default [
         mag: 20,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "rifleman"
         },
@@ -398,7 +398,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "ranger"
         },
@@ -413,7 +413,7 @@ export default [
         mag: 30,
         reload: 2.4,
         talent: {
-            name: "Bread Baskey", 
+            name: "Bread Basket", 
             desc: "TEMP", 
             icon: "breadbasket"
         },
