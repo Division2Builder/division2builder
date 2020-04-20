@@ -14,6 +14,7 @@ const red = '#ED4040';
 const blue = '#70B0F2';
 const yellow = '#E9C16B';
 const transparent = '#00000000';
+const exotic = 'rgb(255, 94, 0)';
 
 export default function Sidebar(props) {
     let skillCells = [];
@@ -23,6 +24,35 @@ export default function Sidebar(props) {
 
     useEffect(() => {
         const ctx = document.getElementById('donutChart').getContext('2d');
+        let datasets = [];
+
+        // if nothing is selected and they have no attrs, just show an exotic colored circle
+        if (!props.minorAttributes.offensive &&
+            !props.majorAttributes.offensive &&
+            !props.minorAttributes.defensive &&
+            !props.majorAttributes.defensive &&
+            !props.minorAttributes.utility &&
+            !props.majorAttributes.utility) {
+            datasets = [{
+                data: [1],
+                backgroundColor: [exotic],
+                borderColor: [exotic],
+            }];
+        } else {
+            datasets = [{
+                data: [
+                    props.minorAttributes.offensive,
+                    props.majorAttributes.offensive,
+                    props.minorAttributes.defensive,
+                    props.majorAttributes.defensive,
+                    props.minorAttributes.utility,
+                    props.majorAttributes.utility
+                ],
+                backgroundColor: [red, transparent, blue, transparent, yellow, transparent],
+                borderColor: [red, red, blue, blue, yellow, yellow],
+            }];
+        }
+
         new Chart(ctx, {
             type: 'doughnut',
             data: {
@@ -34,18 +64,7 @@ export default function Sidebar(props) {
                     "Utility minor",
                     "Utility major",
                 ],
-                datasets: [{
-                    data: [
-                        props.minorAttributes.offensive,
-                        props.majorAttributes.offensive,
-                        props.minorAttributes.defensive,
-                        props.majorAttributes.defensive,
-                        props.minorAttributes.utility,
-                        props.majorAttributes.utility
-                    ],
-                    backgroundColor: [red, transparent, blue, transparent, yellow, transparent],
-                    borderColor: [red, red, blue, blue, yellow, yellow],
-                }]
+                datasets
             },
             options: {
                 cutoutPercentage: 90,
