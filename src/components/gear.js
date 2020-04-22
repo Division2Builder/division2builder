@@ -1,6 +1,6 @@
 import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
-import Selector, {WeaponCard} from './shared/card';
+import Selector, {WeaponCard, ArmorCard} from './shared/card';
 import './gear.scss'
 import Stats from './stats.js'
 
@@ -40,31 +40,89 @@ class Gear extends React.Component {
                     <Selector
                         category="sidearm"
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="mask"
+                    <ArmorCard
+                        context="mask"
+                        armor={{
+                            name: '',
+                            brandSet: '',
+                            armor: 0,
+                            primaryAttribute: '',
+                            secondaryAttributes: [''],
+                            talent: null,
+                            isNamed: false,
+                            isExotic: false,
+                            isGearSet: false
+                        }}
                     />
-                    <Selector
-                        isSelected
-                        name="Yaahl Pack"
-                        category="armor"
-                        armorPiece="backpack"
+                    <ArmorCard
+                        context="backpack"
+                        armor={{
+                            name: 'Garibaldi Pack',
+                            brandSet: 'yaahl',
+                            armor: 130844,
+                            primaryAttribute: 'red',
+                            secondaryAttributes: ['red', 'red'],
+                            talent: null,
+                            isNamed: false,
+                            isExotic: false,
+                            isGearSet: false
+                        }}
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="vest"
+                    <ArmorCard
+                        context="vest"
+                        armor={{
+                            name: '',
+                            brandSet: '',
+                            armor: 0,
+                            primaryAttribute: '',
+                            secondaryAttributes: [''],
+                            talent: null,
+                            isNamed: false,
+                            isExotic: false,
+                            isGearSet: false
+                        }}
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="glove"
+                    <ArmorCard
+                        context="glove"
+                        armor={{
+                            name: '',
+                            brandSet: '',
+                            armor: 0,
+                            primaryAttribute: '',
+                            secondaryAttributes: [''],
+                            talent: null,
+                            isNamed: false,
+                            isExotic: false,
+                            isGearSet: false
+                        }} 
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="holster"
+                    <ArmorCard
+                        context="holster"
+                        armor={{
+                            name: '',
+                            brandSet: '',
+                            armor: 0,
+                            primaryAttribute: '',
+                            secondaryAttributes: [''],
+                            talent: null,
+                            isNamed: false,
+                            isExotic: false,
+                            isGearSet: false
+                        }}
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="kneepads"
+                    <ArmorCard
+                        context="kneepads"
+                        armor={{
+                            name: '',
+                            brandSet: '',
+                            armor: 0,
+                            primaryAttribute: '',
+                            secondaryAttributes: [''],
+                            talent: null,
+                            isNamed: false,
+                            isExotic: false,
+                            isGearSet: false
+                        }}
                     />
                     <Selector
                         category="skill"
