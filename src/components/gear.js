@@ -57,7 +57,7 @@ class Gear extends React.Component {
                     />
                     <ArmorCard
                         context="glove"
-                        armor={this.props.gloves} 
+                        armor={this.props.glove} 
                         updateArmor={this.props.updateArmor}
                     />
                     <ArmorCard

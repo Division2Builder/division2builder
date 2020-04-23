@@ -81,7 +81,7 @@ class App extends React.Component {
                 isExotic: false,
                 isGearSet: false
             },
-            gloves: {
+            glove: {
                 name: '',
                 type: '',
                 brandSet: '',
@@ -129,16 +129,24 @@ class App extends React.Component {
     updateArmor = (armor, piece) => {
         // TODO: Add the changing offensive, defensive and skill attributes
         let newAttributes = this.state.majorAttributes;
+        let newMinorAttributes = this.state.minorAttributes;
         let armorValue = this.state.armor;
         if(this.state[piece].name !== ''){
             newAttributes[this.state[piece].primaryAttribute.type] -= 1;
+            this.state[piece].secondaryAttributes.forEach(attribute=>{
+                newMinorAttributes[attribute.type] -= 1;
+            })
             armorValue -= this.state[piece].armor
         }
         newAttributes[armor.primaryAttribute.type] += 1;
+        armor.secondaryAttributes.forEach(attribute=>{
+            newMinorAttributes[attribute.type] += 1;
+        })
         armorValue += armor.armor
         this.setState({
             [piece] : armor,
             majorAttributes : newAttributes,
+            minorAttributes : newMinorAttributes,
             armor: armorValue
         })
     }
@@ -160,7 +168,7 @@ class App extends React.Component {
                             mask={this.state.mask}
                             backpack={this.state.backpack}
                             vest={this.state.vest}
-                            gloves={this.state.gloves}
+                            glove={this.state.glove}
                             holster={this.state.holster}
                             kneepads={this.state.kneepads}
                             updateWeapon={this.updateWeapon}

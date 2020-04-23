@@ -300,9 +300,26 @@ export function ArmorCard(props) {
             <div className={`holo-card armor`} id={"armor"} onClick={handleShow}>
                 {
                     props.armor.name !== "" ? (
-                        <>
-                            {props.armor.name}
-                        </>
+                        <div className="selectedArmor" style={{position: 'relative', zIndex: 1, height: '100%'}}
+                        >
+                            <div style={{
+                                backgroundImage: `url(${armorIcons[props.context]})`,
+                                backgroundRepeat: 'no-repeat',
+                                opacity: 0.3,
+                                backgroundPosition: 'center',
+                                height: '100%',
+                                zIndex: -1,
+                                position: "absolute",
+                                top: 0,
+                                bottom: 0,
+                                left: 0,
+                                right: 0,
+                                width: '100%'
+                            }}/>
+                            <img className="icon" src={gearSets[props.armor.brandSet]} alt={props.armor.brandSet}/>
+                            <div className={`armorName ${props.armor.isNamed && 'named'}`}>{props.armor.name}</div>
+                            <div className="armorValue">{props.armor.armor}</div>
+                        </div>
                     ):(
                         <>
                             <img className="icon" src={armorIcons[props.context]} alt={props.context}/>
