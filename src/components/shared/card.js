@@ -63,8 +63,11 @@ import TipOfTheSpear from '../../icons/gear_sets/TipOfTheSpear.png';
 import TruePatriot from '../../icons/gear_sets/TruePatriot.png';
 import Wyvern from '../../icons/gear_sets/Wyvern.png';
 import Yaahl from '../../icons/gear_sets/Yaahl.png';
-
+// Armor Talents
+import Vigilance from '../../icons/gear_sets/talents/Vigilance.png';
+// Data
 import weaponData from './weaponData';
+import armorData from './armorData';
 import './selector.scss';
 
 const armorIcons = {
@@ -100,6 +103,10 @@ const gearSets = {
     wyvern: Wyvern,
     yaahl: Yaahl
 };
+
+const armorTalents = {
+    vigilance: Vigilance
+}
 
 const weaponIcons = {
     assault: Assault,
@@ -294,10 +301,13 @@ export function ArmorCard(props) {
                 {
                     props.armor.name !== "" ? (
                         <>
-                            Some text
+                            {props.armor.name}
                         </>
                     ):(
-                        <span className="unselected">Select a {props.context}</span>
+                        <>
+                            <img className="icon" src={armorIcons[props.context]} alt={props.context}/>
+                            <span className="unselected">Select a {props.context}</span>
+                        </>
                     )
                 }
                 
@@ -309,29 +319,29 @@ export function ArmorCard(props) {
                 <Modal.Body>
                     <Row>
                         <Col>
-                            {Object.keys(weaponIcons).map((keyName, keyValue) => {
+                            {Object.keys(gearSets).map((keyName, keyValue) => {
                                 return (
-                                    <a href={`#${keyName}`}><img className='sectionIcon' src={weaponIcons[keyName]} alt={keyName}/></a>
+                                    <a href={`#${keyName}`}><img className='sectionIcon' src={gearSets[keyName]} alt={keyName}/></a>
                                 )
                             })}
                         </Col>
-                        <Col lg={10} md="auto" className="weaponSelectorContainer">
+                        <Col lg={10} md="auto" className="armorSelectorContainer">
                             {
-                                Object.keys(weaponIcons).map((keyname, keyvalue) => {
+                                Object.keys(gearSets).map((keyname, keyvalue) => {
                                     return (
-                                        <div className="weaponSelectorSection" id={keyname}>
-                                            <div className="weaponSelectorTitle">{keyname}</div>
+                                        <div className="armorSelectorSection" id={keyname}>
+                                            <div className="armorSelectorTitle">{keyname}</div>
                                             {
-                                                weaponData.filter((weapon) => {
-                                                    return weapon.type === keyname
-                                                }).sort((weapon1, weapon2) => {
-                                                    return weapon1.name.localeCompare(weapon2.name)
-                                                }).map((weapon) => {
+                                                armorData.filter((armor) => {
+                                                    return armor.brandSet === keyname && armor.type === props.context
+                                                }).sort((armor1, armor2) => {
+                                                    return armor1.name.localeCompare(armor2.name)
+                                                }).map((armor) => {
                                                     return (
-                                                        <div className={`weaponSelectorItem ${weapon.isNamed && 'named'} ${weapon.isExotic && 'exotic'}`} onClick={() => {
-                                                            props.updateWeapon(weapon, props.context);
+                                                        <div className={`armorSelectorItem ${armor.isNamed && 'named'} ${armor.isExotic && 'exotic'}`} onClick={() => {
+                                                            props.updateArmor(armor, props.context);
                                                             handleClose();
-                                                        }}>{weapon.name}</div>
+                                                        }}>{armor.name}</div>
                                                     )
                                                 })
                                             }
@@ -376,7 +386,8 @@ ArmorCard.propTypes={
         isExotic: PropTypes.bool,
         isGearSet: PropTypes.bool
     }),
-    context: PropTypes.oneOf(['mask', 'backpack', 'chest', 'gloves', 'holster', 'kneepads'])
+    context: PropTypes.oneOf(['mask', 'backpack', 'chest', 'gloves', 'holster', 'kneepads']),
+    updateArmor: PropTypes.func
 }
 
 export default Selector;

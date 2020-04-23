@@ -42,87 +42,33 @@ class Gear extends React.Component {
                     />
                     <ArmorCard
                         context="mask"
-                        armor={{
-                            name: '',
-                            brandSet: '',
-                            armor: 0,
-                            primaryAttribute: '',
-                            secondaryAttributes: [''],
-                            talent: null,
-                            isNamed: false,
-                            isExotic: false,
-                            isGearSet: false
-                        }}
+                        armor={this.props.mask}
+                        updateArmor={this.props.updateArmor}
                     />
                     <ArmorCard
                         context="backpack"
-                        armor={{
-                            name: 'Garibaldi Pack',
-                            brandSet: 'yaahl',
-                            armor: 130844,
-                            primaryAttribute: 'red',
-                            secondaryAttributes: ['red', 'red'],
-                            talent: null,
-                            isNamed: false,
-                            isExotic: false,
-                            isGearSet: false
-                        }}
+                        armor={this.props.backpack}
+                        updateArmor={this.props.updateArmor}
                     />
                     <ArmorCard
                         context="vest"
-                        armor={{
-                            name: '',
-                            brandSet: '',
-                            armor: 0,
-                            primaryAttribute: '',
-                            secondaryAttributes: [''],
-                            talent: null,
-                            isNamed: false,
-                            isExotic: false,
-                            isGearSet: false
-                        }}
+                        armor={this.props.vest}
+                        updateArmor={this.props.updateArmor}
                     />
                     <ArmorCard
                         context="glove"
-                        armor={{
-                            name: '',
-                            brandSet: '',
-                            armor: 0,
-                            primaryAttribute: '',
-                            secondaryAttributes: [''],
-                            talent: null,
-                            isNamed: false,
-                            isExotic: false,
-                            isGearSet: false
-                        }} 
+                        armor={this.props.gloves} 
+                        updateArmor={this.props.updateArmor}
                     />
                     <ArmorCard
                         context="holster"
-                        armor={{
-                            name: '',
-                            brandSet: '',
-                            armor: 0,
-                            primaryAttribute: '',
-                            secondaryAttributes: [''],
-                            talent: null,
-                            isNamed: false,
-                            isExotic: false,
-                            isGearSet: false
-                        }}
+                        armor={this.props.holster}
+                        updateArmor={this.props.updateArmor}
                     />
                     <ArmorCard
                         context="kneepads"
-                        armor={{
-                            name: '',
-                            brandSet: '',
-                            armor: 0,
-                            primaryAttribute: '',
-                            secondaryAttributes: [''],
-                            talent: null,
-                            isNamed: false,
-                            isExotic: false,
-                            isGearSet: false
-                        }}
+                        armor={this.props.kneepads}
+                        updateArmor={this.props.updateArmor}
                     />
                     <Selector
                         category="skill"
