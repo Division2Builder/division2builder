@@ -335,7 +335,7 @@ export function ArmorCard(props) {
                 </Modal.Header>
                 <Modal.Body>
                     <Row>
-                        <Col>
+                        <Col className="gearsetSelectorContainer">
                             {Object.keys(gearSets).map((keyName, keyValue) => {
                                 return (
                                     <a href={`#${keyName}`}><img className='sectionIcon' src={gearSets[keyName]} alt={keyName}/></a>
