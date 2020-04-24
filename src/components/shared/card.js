@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Modal, Button, Row, Col} from 'react-bootstrap';
+// Armor Types
 import Mask from '../../icons/gear_types/mask.png';
 import Backpack from '../../icons/gear_types/backpack.png';
 import Vest from '../../icons/gear_types/vest.png';
 import Glove from '../../icons/gear_types/gloves.png';
 import Holster from '../../icons/gear_types/holster.png';
 import Kneepads from '../../icons/gear_types/kneepads.png';
+// Weapons
 import Assault from '../../icons/weapons/AssaultRifle.png';
 import LMG from '../../icons/weapons/Light Machine Gun.png';
 import Marksman from '../../icons/weapons/Marksman Rifle.png';
 import Rifle from '../../icons/weapons/Rifle.png';
 import Shotgun from '../../icons/weapons/Shotgun.png';
 import Submachine from '../../icons/weapons/Submachine Gun.png';
+// Specializations
 import Demolistionist from '../../icons/specializations/demolitionist.png';
 import Survivalist from '../../icons/specializations/survivalist.png';
 import Sharpshooter from '../../icons/specializations/sharpshooter.png';
 import Gunner from '../../icons/specializations/gunner.png'
 import Technician from '../../icons/specializations/technician.png'
+// Weapon Talents
 import Breadbasket from '../../icons/weapons/talents/Breadbasket.png'
 import ClosePersonal from '../../icons/weapons/talents/Close & Personal.png'
 import Eyeless from '../../icons/weapons/talents/Eyeless.png'
@@ -36,7 +40,34 @@ import Spike from '../../icons/weapons/talents/Spike.png'
 import SteadyHanded from '../../icons/weapons/talents/Steady Handed.png'
 import Strained from '../../icons/weapons/talents/Strained.png'
 import Vindictive from '../../icons/weapons/talents/Vindictive.png'
+// Brand Sets
+import FiveOneOne from '../../icons/gear_sets/511.png';
+import AcesAndEights from '../../icons/gear_sets/AcesAndEights.png';
+import Airaldi from '../../icons/gear_sets/Airaldi.png';
+import Alps from '../../icons/gear_sets/Alps.png';
+import Badger from '../../icons/gear_sets/Badger.png';
+import China from '../../icons/gear_sets/China.png';
+import Douglas from '../../icons/gear_sets/Douglas.png';
+import Fenris from '../../icons/gear_sets/Fenris.png';
+import Gila from '../../icons/gear_sets/Gila.png';
+import HardWire from '../../icons/gear_sets/HardWired.png';
+import Murakami from '../../icons/gear_sets/Murakami.png';
+import NegotiatorsDilemma from '../../icons/gear_sets/NegotiatorsDilemma.png';
+import OngoingDirective from '../../icons/gear_sets/OngoingDirective.png';
+import Overlord from '../../icons/gear_sets/Overlord.png';
+import Petrov from '../../icons/gear_sets/Petrov.png';
+import Providence from '../../icons/gear_sets/Providence.png';
+import Richter from '../../icons/gear_sets/Richter.png';
+import Sokolov from '../../icons/gear_sets/Sokolov.png';
+import TipOfTheSpear from '../../icons/gear_sets/TipOfTheSpear.png';
+import TruePatriot from '../../icons/gear_sets/TruePatriot.png';
+import Wyvern from '../../icons/gear_sets/Wyvern.png';
+import Yaahl from '../../icons/gear_sets/Yaahl.png';
+// Armor Talents
+import Vigilance from '../../icons/gear_sets/talents/Vigilance.png';
+// Data
 import weaponData from './weaponData';
+import armorData from './armorData';
 import './selector.scss';
 
 const armorIcons = {
@@ -45,8 +76,37 @@ const armorIcons = {
     vest: Vest,
     glove: Glove,
     holster: Holster,
-    kneepads: Kneepads
+    kneepads: Kneepads,
 };
+
+const gearSets = {
+    fiveoneone : FiveOneOne,
+    aces: AcesAndEights,
+    airaldi: Airaldi,
+    alps: Alps,
+    badger: Badger,
+    china: China,
+    douglas: Douglas,
+    fenris: Fenris,
+    gila: Gila,
+    hardwire: HardWire,
+    murakami: Murakami,
+    negotiators: NegotiatorsDilemma,
+    ongoing: OngoingDirective,
+    overlord: Overlord,
+    petrov: Petrov,
+    providence: Providence,
+    richter: Richter,
+    sokolov: Sokolov,
+    tipofthespear: TipOfTheSpear,
+    truepatriot: TruePatriot,
+    wyvern: Wyvern,
+    yaahl: Yaahl
+};
+
+const armorTalents = {
+    vigilance: Vigilance
+}
 
 const weaponIcons = {
     assault: Assault,
@@ -162,7 +222,7 @@ export function WeaponCard(props) {
             </div>
             <Modal show={show} onHide={handleClose} centered size="lg">
                 <Modal.Header closeButton>
-                    <Modal.Title>{props.weapon.name ? (<>Modal heading</>) : (<>somethign else</>)}</Modal.Title>
+                    <Modal.Title>Select a weapon</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Row>
@@ -223,13 +283,130 @@ WeaponCard.propTypes={
             desc: PropTypes.string,
             icon: PropTypes.string
         }),
-        isNamed: PropTypes.bool
+        isNamed: PropTypes.bool,
+        isExotic: PropTypes.bool
     }),
-    context: PropTypes.string
+    context: PropTypes.oneOf(['primary', 'secondary'])
 }
 
-WeaponCard.defaultProps={
-    isSelected: false
+export function ArmorCard(props) {
+    const [show, setShow] = React.useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    return (
+        <>
+            <div className={`holo-card armor`} id={"armor"} onClick={handleShow}>
+                {
+                    props.armor.name !== "" ? (
+                        <div className="selectedArmor" style={{position: 'relative', zIndex: 1, height: '100%'}}
+                        >
+                            {/* This is kinda hacky but the only way I can get the image in the background and transparent */}
+                            <div style={{
+                                backgroundImage: `url(${armorIcons[props.context]})`,
+                                backgroundRepeat: 'no-repeat',
+                                opacity: 0.3,
+                                backgroundPosition: 'center',
+                                height: '100%',
+                                zIndex: -1,
+                                position: "absolute",
+                                top: 0,
+                                bottom: 0,
+                                left: 0,
+                                right: 0,
+                                width: '100%'
+                            }}/>
+                            <img className="icon" src={gearSets[props.armor.brandSet]} alt={props.armor.brandSet}/>
+                            <div className={`armorName ${props.armor.isNamed && 'named'}`}>{props.armor.name}</div>
+                            <div className="armorValue">{props.armor.armor}</div>
+                            <img className="icon" src={armorTalents[props.armor.talent.icon]} alt={props.armor.talent.name}/>
+                        </div>
+                    ):(
+                        <>
+                            <img className="icon" src={armorIcons[props.context]} alt={props.context}/>
+                            <span className="unselected">Select a {props.context}</span>
+                        </>
+                    )
+                }
+                
+            </div>
+            <Modal show={show} onHide={handleClose} centered size="lg">
+                <Modal.Header closeButton>
+                    <Modal.Title>Select a {props.context}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Row>
+                        <Col className="gearsetSelectorContainer">
+                            {Object.keys(gearSets).map((keyName, keyValue) => {
+                                return (
+                                    <a href={`#${keyName}`}><img className='sectionIcon' src={gearSets[keyName]} alt={keyName}/></a>
+                                )
+                            })}
+                        </Col>
+                        <Col lg={10} md="auto" className="armorSelectorContainer">
+                            {
+                                Object.keys(gearSets).map((keyname, keyvalue) => {
+                                    return (
+                                        <div className="armorSelectorSection" id={keyname}>
+                                            <div className="armorSelectorTitle">{keyname}</div>
+                                            {
+                                                armorData.filter((armor) => {
+                                                    return armor.brandSet === keyname && armor.type === props.context
+                                                }).sort((armor1, armor2) => {
+                                                    return armor1.name.localeCompare(armor2.name)
+                                                }).map((armor) => {
+                                                    return (
+                                                        <div className={`armorSelectorItem ${armor.isNamed && 'named'} ${armor.isExotic && 'exotic'}`} onClick={() => {
+                                                            props.updateArmor(armor, props.context);
+                                                            handleClose();
+                                                        }}>{armor.name}</div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    )
+                                })
+                            }
+                        </Col>
+                    </Row>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    )
+}
+
+ArmorCard.propTypes={
+    armor: PropTypes.shape({
+        name: PropTypes.string,
+        brandSet: PropTypes.oneOf([
+            'fiveoneone', 'aces', 'airaldi', 'alps', 'badger', 'china', 
+            'douglas', 'fenris', 'gila', 'hardwire', 'murakami', 'negotiators', 
+            'ongoing', 'overlord', 'petrov', 'providence', 'richter', 'sokolov',
+            'tipofthespear', 'truepatriot', 'wvyvern', 'yaahl'
+        ]),
+        armor: PropTypes.number,
+        primaryAttribute: PropTypes.string,
+        secondaryAttributes: PropTypes.arrayOf(PropTypes.string),
+        talent: PropTypes.shape({
+            name: PropTypes.string,
+            desc: PropTypes.string,
+            icon: PropTypes.string
+        }),
+        isNamed: PropTypes.bool,
+        isExotic: PropTypes.bool,
+        isGearSet: PropTypes.bool
+    }),
+    context: PropTypes.oneOf(['mask', 'backpack', 'chest', 'gloves', 'holster', 'kneepads']),
+    updateArmor: PropTypes.func
 }
 
 export default Selector;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
-import Selector, {WeaponCard} from './shared/card';
+import Selector, {WeaponCard, ArmorCard} from './shared/card';
 import './gear.scss'
 import Stats from './stats.js'
 
@@ -40,31 +40,35 @@ class Gear extends React.Component {
                     <Selector
                         category="sidearm"
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="mask"
+                    <ArmorCard
+                        context="mask"
+                        armor={this.props.mask}
+                        updateArmor={this.props.updateArmor}
                     />
-                    <Selector
-                        isSelected
-                        name="Yaahl Pack"
-                        category="armor"
-                        armorPiece="backpack"
+                    <ArmorCard
+                        context="backpack"
+                        armor={this.props.backpack}
+                        updateArmor={this.props.updateArmor}
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="vest"
+                    <ArmorCard
+                        context="vest"
+                        armor={this.props.vest}
+                        updateArmor={this.props.updateArmor}
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="glove"
+                    <ArmorCard
+                        context="glove"
+                        armor={this.props.glove} 
+                        updateArmor={this.props.updateArmor}
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="holster"
+                    <ArmorCard
+                        context="holster"
+                        armor={this.props.holster}
+                        updateArmor={this.props.updateArmor}
                     />
-                    <Selector
-                        category="armor"
-                        armorPiece="kneepads"
+                    <ArmorCard
+                        context="kneepads"
+                        armor={this.props.kneepads}
+                        updateArmor={this.props.updateArmor}
                     />
                     <Selector
                         category="skill"

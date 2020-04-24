@@ -10,16 +10,16 @@ class App extends React.Component {
         super(props);
         this.state = {
             majorAttributes: {
-                offensive: 3,
-                defensive: 1,
-                utility: 2
+                offensive: 0,
+                defensive: 0,
+                utility: 0
             },
             minorAttributes: {
-                offensive: 8,
-                defensive: 3,
-                utility: 4
+                offensive: 0,
+                defensive: 0,
+                utility: 0
             },
-            armor: '203.6k',
+            armor: 203600,
             health: '127.8k',
             primary: {
                 name: "Baker's Dozen",
@@ -45,12 +45,108 @@ class App extends React.Component {
                 isNamed: false,
                 isExotic: false
             },
+            mask: {
+                name: '',
+                type: '',
+                brandSet: '',
+                armor: 0,
+                primaryAttribute: {},
+                secondaryAttributes: [],
+                talent: {},
+                isNamed: false,
+                isExotic: false,
+                isGearSet: false
+            },
+            backpack: {
+                name: '',
+                type: '',
+                brandSet: '',
+                armor: 0,
+                primaryAttribute: {},
+                secondaryAttributes: [],
+                talent: {},
+                isNamed: false,
+                isExotic: false,
+                isGearSet: false
+            },
+            vest: {
+                name: '',
+                type: '',
+                brandSet: '',
+                armor: 0,
+                primaryAttribute: {},
+                secondaryAttributes: [],
+                talent: {},
+                isNamed: false,
+                isExotic: false,
+                isGearSet: false
+            },
+            glove: {
+                name: '',
+                type: '',
+                brandSet: '',
+                armor: 0,
+                primaryAttribute: {},
+                secondaryAttributes: [],
+                talent: {},
+                isNamed: false,
+                isExotic: false,
+                isGearSet: false
+            },
+            holster: {
+                name: '',
+                type: '',
+                brandSet: '',
+                armor: 0,
+                primaryAttribute: {},
+                secondaryAttributes: [],
+                talent: {},
+                isNamed: false,
+                isExotic: false,
+                isGearSet: false
+            },
+            kneepads: {
+                name: '',
+                type: '',
+                brandSet: '',
+                armor: 0,
+                primaryAttribute: {},
+                secondaryAttributes: [],
+                talent: {},
+                isNamed: false,
+                isExotic: false,
+                isGearSet: false
+            }
         };
     };
 
     updateWeapon = (weapon, position) => {
         this.setState({
             [position] : weapon
+        })
+    };
+
+    updateArmor = (armor, piece) => {
+        let newAttributes = this.state.majorAttributes;
+        let newMinorAttributes = this.state.minorAttributes;
+        let armorValue = this.state.armor;
+        if(this.state[piece].name !== ''){
+            newAttributes[this.state[piece].primaryAttribute.type] -= 1;
+            this.state[piece].secondaryAttributes.forEach(attribute=>{
+                newMinorAttributes[attribute.type] -= 1;
+            })
+            armorValue -= this.state[piece].armor
+        }
+        newAttributes[armor.primaryAttribute.type] += 1;
+        armor.secondaryAttributes.forEach(attribute=>{
+            newMinorAttributes[attribute.type] += 1;
+        })
+        armorValue += armor.armor
+        this.setState({
+            [piece] : armor,
+            majorAttributes : newAttributes,
+            minorAttributes : newMinorAttributes,
+            armor: armorValue
         })
     }
 
@@ -68,7 +164,14 @@ class App extends React.Component {
                         <Gear
                             primary={this.state.primary}
                             secondary={this.state.secondary}
+                            mask={this.state.mask}
+                            backpack={this.state.backpack}
+                            vest={this.state.vest}
+                            glove={this.state.glove}
+                            holster={this.state.holster}
+                            kneepads={this.state.kneepads}
                             updateWeapon={this.updateWeapon}
+                            updateArmor={this.updateArmor}
                         />
                     </Row>
                 </div>
