@@ -65,6 +65,18 @@ import Wyvern from '../../icons/gear_sets/Wyvern.png';
 import Yaahl from '../../icons/gear_sets/Yaahl.png';
 // Armor Talents
 import Vigilance from '../../icons/gear_sets/talents/Vigilance.png';
+// Skills
+import StickyBomb from '../../icons/skills/StickyBomb.png';
+// import TripWireTrap from '../../icons/skills/TripWireTrap.png';
+// import Decoy from '../../icons/skills/Decoy.png';
+import ChemLauncher from '../../icons/skills/ChemLauncher.png';
+import Drone from '../../icons/skills/Drone.png';
+import Firefly from '../../icons/skills/Firefly.png';
+import Hive from '../../icons/skills/Hive.png';
+import Pulse from '../../icons/skills/Pulse.png';
+import SeekerMine from '../../icons/skills/SeekerMine.png';
+import Shield from '../../icons/skills/Shield.png';
+import Turret from '../../icons/skills/Turret.png';
 // Data
 import weaponData from './data/weapons';
 import armorData from './data/armor';
@@ -148,7 +160,17 @@ const weaponTalentsIcons = {
 }
 
 const skillIcons = {
-    "Burn Sticky Bomb": Ignited // TODO add icons
+    "Sticky Bomb": StickyBomb,
+    // "Trip-Wire Trap": TripWireTrap,
+    // Decoy,
+    "Chem Launcher": ChemLauncher,
+    Drone,
+    Firefly,
+    Hive,
+    Pulse,
+    "Seeker Mine": SeekerMine,
+    Shield,
+    Turret
 }
 
 function Selector(props) {
@@ -456,25 +478,21 @@ export function SkillCard(props) {
                 <Modal.Body>
                     <Row>
                         <Col>
-                            {Object.keys(weaponIcons).map((keyName, keyValue) => {
+                            {Object.keys(skillIcons).map((key) => {
                                 return (
-                                    <a href={`#${keyName}`}><img className='sectionIcon' src={skillIcons[keyName]}
-                                                                 alt={keyName}/></a>
+                                    <a href={`#${key}`}><img className='sectionIcon' src={skillIcons[key]}
+                                                                 alt={key}/></a>
                                 )
                             })}
                         </Col>
                         <Col lg={10} md="auto" className="weaponSelectorContainer">
                             {
-                                Object.keys(skillIcons).map((keyname, keyvalue) => {
+                                Object.keys(skillIcons).map((key) => {
                                     return (
-                                        <div className="weaponSelectorSection" id={keyname}>
-                                            <div className="weaponSelectorTitle">{keyname}</div>
+                                        <div className="weaponSelectorSection" id={`${key}-section`}>
+                                            <div className="weaponSelectorTitle">{key}</div>
                                             {
-                                                skillData.filter((skill) => {
-                                                    return skill.type === keyname
-                                                }).sort((skill1, skill2) => {
-                                                    return skill1.name.localeCompare(skill2.name)
-                                                }).map((skill) => {
+                                                skillData[key].map((skill) => {
                                                     return (
                                                         <div
                                                             className='weaponSelectorItem'
