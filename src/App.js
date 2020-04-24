@@ -127,7 +127,6 @@ class App extends React.Component {
     };
 
     updateArmor = (armor, piece) => {
-        // TODO: Add the changing offensive, defensive and skill attributes
         let newAttributes = this.state.majorAttributes;
         let newMinorAttributes = this.state.minorAttributes;
         let armorValue = this.state.armor;

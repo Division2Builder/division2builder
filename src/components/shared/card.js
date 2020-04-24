@@ -320,6 +320,7 @@ export function ArmorCard(props) {
                             <img className="icon" src={gearSets[props.armor.brandSet]} alt={props.armor.brandSet}/>
                             <div className={`armorName ${props.armor.isNamed && 'named'}`}>{props.armor.name}</div>
                             <div className="armorValue">{props.armor.armor}</div>
+                            <img className="icon" src={armorTalents[props.armor.talent.icon]} alt={props.armor.talent.name}/>
                         </div>
                     ):(
                         <>
