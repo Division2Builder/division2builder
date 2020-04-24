@@ -24,9 +24,6 @@ class Gear extends React.Component {
                         isSelected
                         specialization="sharpshooter"
                     />
-                    <Selector
-                        category="grenade"
-                    />
                     <WeaponCard
                         weapon={this.props.primary}
                         context="primary"
