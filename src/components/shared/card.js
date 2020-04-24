@@ -302,6 +302,7 @@ export function ArmorCard(props) {
                     props.armor.name !== "" ? (
                         <div className="selectedArmor" style={{position: 'relative', zIndex: 1, height: '100%'}}
                         >
+                            {/* This is kinda hacky but the only way I can get the image in the background and transparent */}
                             <div style={{
                                 backgroundImage: `url(${armorIcons[props.context]})`,
                                 backgroundRepeat: 'no-repeat',
