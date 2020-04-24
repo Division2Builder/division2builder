@@ -1,6 +1,6 @@
 import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
-import Selector, {WeaponCard, ArmorCard} from './shared/card';
+import Selector, {WeaponCard, ArmorCard, SkillCard} from './shared/card';
 import './gear.scss'
 import Stats from './stats.js'
 
@@ -67,11 +67,15 @@ class Gear extends React.Component {
                         armor={this.props.kneepads}
                         updateArmor={this.props.updateArmor}
                     />
-                    <Selector
-                        category="skill"
+                    <SkillCard
+                        context="skill1"
+                        name={this.props.skill1.name}
+                        updateSkill={this.props.updateSkill}
                     />
-                    <Selector
-                        category="skill"
+                    <SkillCard
+                        context="skill2"
+                        name={this.props.skill2.name}
+                        updateSkill={this.props.updateSkill}
                     />
                 </div>
                 
