@@ -4,6 +4,7 @@ import './App.scss';
 import Background from './components/shared/background.png'
 import Sidebar from "./components/sidebar";
 import {Row} from "react-bootstrap";
+import Stats from './components/stats';
 
 class App extends React.Component {
     constructor(props) {
@@ -173,6 +174,9 @@ class App extends React.Component {
                             updateWeapon={this.updateWeapon}
                             updateArmor={this.updateArmor}
                         />
+                    </Row>
+                    <Row>
+                        <Stats statInfo = {this.state}/>
                     </Row>
                 </div>
             </div>
