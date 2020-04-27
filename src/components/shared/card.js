@@ -461,8 +461,8 @@ export function SkillCard(props) {
                             <img className="icon" src={skillIcons[props.name]} alt={props.name}/>
                             <span className="name">{props.name}</span><br/>
 
-                            {props.baseStats.map((value, index) =>
-                                <span className="damage">{index} : {value}</span>
+                            {Object.entries(props.baseStats).forEach(([key, value]) =>
+                                <span className="damage">{key} : {value}</span>
                             )}
                         </>
                     ) : (

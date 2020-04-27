@@ -71,11 +71,13 @@ class Gear extends React.Component {
                         context="skill1"
                         name={this.props.skill1.name}
                         updateSkill={this.props.updateSkill}
+                        baseStats={this.props.skill1.baseStats}
                     />
                     <SkillCard
                         context="skill2"
                         name={this.props.skill2.name}
                         updateSkill={this.props.updateSkill}
+                        baseStats={this.props.skill2.baseStats}
                     />
                 </div>
                 
