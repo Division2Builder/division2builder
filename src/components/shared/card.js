@@ -159,7 +159,7 @@ const weaponTalentsIcons = {
     vindictive: Vindictive
 }
 
-const skillIcons = {
+const skillGroups = {
     "Sticky Bomb": StickyBomb,
     // "Trip-Wire Trap": TripWireTrap,
     // Decoy,
@@ -171,6 +171,11 @@ const skillIcons = {
     "Seeker Mine": SeekerMine,
     Shield,
     Turret
+}
+
+const skillIcons = {
+    "Burn Sticky Bomb": StickyBomb,
+    "Explosive Sticky Bomb": StickyBomb
 }
 
 function Selector(props) {
@@ -478,16 +483,16 @@ export function SkillCard(props) {
                 <Modal.Body>
                     <Row>
                         <Col>
-                            {Object.keys(skillIcons).map((key) => {
+                            {Object.keys(skillGroups).map((key) => {
                                 return (
-                                    <a href={`#${key}`}><img className='sectionIcon' src={skillIcons[key]}
+                                    <a href={`#${key}`}><img className='sectionIcon' src={skillGroups[key]}
                                                                  alt={key}/></a>
                                 )
                             })}
                         </Col>
                         <Col lg={10} md="auto" className="weaponSelectorContainer">
                             {
-                                Object.keys(skillIcons).map((key) => {
+                                Object.keys(skillGroups).map((key) => {
                                     return (
                                         <div className="weaponSelectorSection" id={`${key}-section`}>
                                             <div className="weaponSelectorTitle">{key}</div>
