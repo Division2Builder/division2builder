@@ -10,7 +10,9 @@ class Stats extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            show: false
+            show: false,
+            weaponTypes: ["rifle", "assault", "marksman", "smg", "lmg", "shotgun", "sidearm"],
+            gearTypes: ["backpack", "mask", "vest", "kneepads", "glove", "holster"]
         }
     };
 

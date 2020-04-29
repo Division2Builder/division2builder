@@ -5,6 +5,7 @@ import Background from './components/shared/background.png'
 import Sidebar from "./components/sidebar";
 import {Row} from "react-bootstrap";
 import Stats from './components/stats';
+import TempStats from './components/tempStats';
 
 class App extends React.Component {
     constructor(props) {
@@ -176,7 +177,7 @@ class App extends React.Component {
                         />
                     </Row>
                     <Row>
-                        <Stats statInfo = {this.state}/>
+                        <TempStats selectedGear = {this.state}/>
                     </Row>
                 </div>
             </div>
