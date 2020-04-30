@@ -118,6 +118,16 @@ class App extends React.Component {
                 isNamed: false,
                 isExotic: false,
                 isGearSet: false
+            },
+            skill1: {
+                name: '',
+                baseStats: {},
+                modifiers: {}
+            },
+            skill2: {
+                name: '',
+                baseStats: {},
+                modifiers: {}
             }
         };
     };
@@ -152,6 +162,12 @@ class App extends React.Component {
         })
     }
 
+    updateSkill = (skill, position) => {
+        this.setState({
+            [position] : skill
+        })
+    };
+
     render() {
         return (
             <div className="App" style={style}>
@@ -172,8 +188,11 @@ class App extends React.Component {
                             glove={this.state.glove}
                             holster={this.state.holster}
                             kneepads={this.state.kneepads}
+                            skill1={this.state.skill1}
+                            skill2={this.state.skill2}
                             updateWeapon={this.updateWeapon}
                             updateArmor={this.updateArmor}
+                            updateSkill={this.updateSkill}
                         />
                     </Row>
                     <Row>

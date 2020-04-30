@@ -1,5 +1,5 @@
 import React from 'react';
-import Selector, {WeaponCard, ArmorCard} from './shared/card';
+import Selector, {WeaponCard, ArmorCard, SkillCard} from './shared/card';
 import './gear.scss'
 
 class Gear extends React.Component {
@@ -59,11 +59,17 @@ class Gear extends React.Component {
                         armor={this.props.kneepads}
                         updateArmor={this.props.updateArmor}
                     />
-                    <Selector
-                        category="skill"
+                    <SkillCard
+                        context="skill1"
+                        name={this.props.skill1.name}
+                        updateSkill={this.props.updateSkill}
+                        baseStats={this.props.skill1.baseStats}
                     />
-                    <Selector
-                        category="skill"
+                    <SkillCard
+                        context="skill2"
+                        name={this.props.skill2.name}
+                        updateSkill={this.props.updateSkill}
+                        baseStats={this.props.skill2.baseStats}
                     />
                 </div>
             </>

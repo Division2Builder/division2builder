@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Col, Row, Modal, Button} from 'react-bootstrap';
 import './stats.scss'
-import statSections from './shared/statData'
+import statSections from './shared/data/stats'
 import Vest from '../icons/gear_types/vest.png'
 import Breakdown from './breakdown';
 import StatSection from './statSection';
@@ -70,4 +70,3 @@ class Stats extends React.Component {
 }
 
 export default Stats;
-    
