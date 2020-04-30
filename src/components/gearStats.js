@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './gearStats.scss'
 import { Row } from 'react-bootstrap';
 
@@ -10,7 +10,7 @@ function GearStats(props) {
         var info = <Weapon item = {props.gearPiece}/>;
     } 
     else if (gearTypes.includes(props.gearPiece.type)) {
-        var info = <GearPiece item = {props.gearPiece}/>;
+        info = <GearPiece item = {props.gearPiece}/>;
     }
 
     return (
