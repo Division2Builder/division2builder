@@ -3,7 +3,6 @@ import './gearStats.scss'
 import { Row } from 'react-bootstrap';
 
 function GearStats(props) {
-    const [chosen, setChosen] = useState();
     const weaponTypes = ["rifle", "assault", "marksman", "smg", "lmg", "shotgun", "sidearm"];
     const gearTypes = ["backpack", "mask", "vest", "kneepads", "glove", "holster"];
 
@@ -68,6 +67,26 @@ export function GearPiece(props) {
                 <div className="stat">
                     <span className="statName">Armor</span>
                     <span className="statAmount">{props.item.armor}</span>
+                </div>
+            </Row>
+            <Row>
+                <div className="stat">
+                    <span className="statName">{props.item.primaryAttribute.name}</span>
+                    <span className="statAmount">{props.item.primaryAttribute.value}%</span>
+                </div>
+            </Row>
+            <Row>
+                {props.item.secondaryAttributes.map((attribute, index) => (
+                    <div class="stat" key={index}>
+                        <span className="statName">{attribute.name}</span>
+                        <span className="statAmount">{attribute.value}%</span>
+                    </div>
+                ))}
+            </Row>
+            <Row>
+                <div className="stat">
+                    <span className="statName">Talent</span>
+                    <span className="statAmount">{props.item.talent.name}</span>
                 </div>
             </Row>
         </div>

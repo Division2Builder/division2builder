@@ -46,14 +46,37 @@ class TempStats extends React.Component {
                                     <a href="#kneepads"><img className="sectionIcon" src={Kneepads} alt="Kneepads"/></a>
                                 </Col>
                                 <Col className="grid statValuesGrid">
-                                    <GearStats id = "primary" gearPiece = {this.props.selectedGear.primary}/>
-                                    <GearStats id = "secondary" gearPiece = {this.props.selectedGear.secondary}/>
-                                    <GearStats id = "mask" gearPiece = {this.props.selectedGear.mask}/>
-                                    <GearStats id = "backpack" gearPiece = {this.props.selectedGear.backpack}/>
-                                    <GearStats id = "vest" gearPiece = {this.props.selectedGear.vest}/>
-                                    <GearStats id = "glove" gearPiece = {this.props.selectedGear.glove}/>
-                                    <GearStats id = "holster" gearPiece = {this.props.selectedGear.holster}/>
-                                    <GearStats id = "kneepads" gearPiece = {this.props.selectedGear.kneepads}/>
+                                    <GearStats 
+                                        id = "primary" 
+                                        gearPiece = {this.props.selectedGear.primary} 
+                                    />
+                                    <GearStats 
+                                        id = "secondary" 
+                                        gearPiece = {this.props.selectedGear.secondary}
+                                    />
+                                    <GearStats 
+                                        id = "mask" 
+                                        gearPiece = {this.props.selectedGear.mask}
+                                    />
+                                    <GearStats 
+                                        id = "backpack" 
+                                        gearPiece = {this.props.selectedGear.backpack}/>
+                                    <GearStats 
+                                        id = "vest" 
+                                        gearPiece = {this.props.selectedGear.vest}
+                                    />
+                                    <GearStats 
+                                        id = "glove" 
+                                        gearPiece = {this.props.selectedGear.glove}
+                                    />
+                                    <GearStats 
+                                        id = "holster" 
+                                        gearPiece = {this.props.selectedGear.holster} 
+                                    />
+                                    <GearStats 
+                                        id = "kneepads" 
+                                        gearPiece = {this.props.selectedGear.kneepads}
+                                    />
                                 </Col>
                                 <Col className="grid statBreakdownGrid">
                                     <Breakdown/>
