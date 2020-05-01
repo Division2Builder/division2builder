@@ -4,6 +4,8 @@ import './App.scss';
 import Background from './components/shared/background.png'
 import Sidebar from "./components/sidebar";
 import {Row} from "react-bootstrap";
+//import Stats from './components/stats';
+import TempStats from './components/tempStats';
 
 class App extends React.Component {
     constructor(props) {
@@ -192,6 +194,9 @@ class App extends React.Component {
                             updateArmor={this.updateArmor}
                             updateSkill={this.updateSkill}
                         />
+                    </Row>
+                    <Row>
+                        <TempStats selectedGear = {this.state}/>
                     </Row>
                 </div>
             </div>

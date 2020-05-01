@@ -1,19 +1,11 @@
 import React from 'react';
-import {Modal, Button} from 'react-bootstrap';
 import Selector, {WeaponCard, ArmorCard, SkillCard} from './shared/card';
 import './gear.scss'
-import Stats from './stats.js'
 
 class Gear extends React.Component {
     constructor(props){
         super(props)
-        this.state = {
-            show: false
-        }
     };
-    
-    handleClose = () => {this.setState({show:false})};
-    handleShow = () => {this.setState({show:true})};
 
     render() {
         return (
@@ -80,24 +72,6 @@ class Gear extends React.Component {
                         baseStats={this.props.skill2.baseStats}
                     />
                 </div>
-                
-                <Button variant="primary" onClick={this.handleShow}>
-                    View Stats
-                </Button>
-
-                <Modal show={this.state.show} onHide={this.handleClose} centered size="xl">
-                    <Modal.Header closeButton>
-                        <Modal.Title>Stats</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Stats/>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.handleClose}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
             </>
         );
     }

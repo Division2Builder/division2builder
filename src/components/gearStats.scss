@@ -1,0 +1,37 @@
+@import "src/colors";
+
+.statSection {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.statSection:hover {
+    background-color: $section-hover;
+  }  
+
+.stat {
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.statAmount {
+  padding-left: 20px;
+  padding-right: 40px;
+  float: right;
+  font-size: medium;
+  font-weight: bold;
+  color: $orange;
+}
+
+.statName {
+padding-left: 10px;
+  float: left;
+  font-size: medium;
+}
+
+.active {
+  background-color: $section-hover;
+}
