@@ -3,10 +3,6 @@ import Selector, {WeaponCard, ArmorCard, SkillCard} from './shared/card';
 import './gear.scss'
 
 class Gear extends React.Component {
-    constructor(props){
-        super(props)
-    };
-
     render() {
         return (
             <>
