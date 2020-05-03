@@ -67,8 +67,8 @@ import Yaahl from '../../icons/gear_sets/Yaahl.png';
 import Vigilance from '../../icons/gear_sets/talents/Vigilance.png';
 // Skills
 import StickyBomb from '../../icons/skills/StickyBomb.png';
-// import TripWireTrap from '../../icons/skills/TripWireTrap.png';
-// import Decoy from '../../icons/skills/Decoy.png';
+import Trap from '../../icons/skills/Trap.png';
+import Decoy from '../../icons/skills/Decoy.png';
 import ChemLauncher from '../../icons/skills/ChemLauncher.png';
 import Drone from '../../icons/skills/Drone.png';
 import Firefly from '../../icons/skills/Firefly.png';
@@ -161,21 +161,56 @@ const weaponTalentsIcons = {
 
 const skillGroups = {
     "Sticky Bomb": StickyBomb,
-    // "Trip-Wire Trap": TripWireTrap,
-    // Decoy,
-    "Chem Launcher": ChemLauncher,
-    Drone,
-    Firefly,
-    Hive,
+    Trap,
+    Decoy,
     Pulse,
+    Turret,
+    Hive,
+    "Chem Launcher": ChemLauncher,
+    Firefly,
     "Seeker Mine": SeekerMine,
-    Shield,
-    Turret
+    Drone,
+    "Ballistic Shield": Shield,
 }
 
 const skillIcons = {
     "Burn Sticky Bomb": StickyBomb,
-    "Explosive Sticky Bomb": StickyBomb
+    "Explosive Sticky Bomb": StickyBomb,
+    "Shock Trap": Trap,
+    "Holographic Distraction": Decoy,
+    "Reinforcer Chem Launcher": ChemLauncher,
+    "Firestarter Chem Launcher": ChemLauncher,
+    "Riot Foam Chem Launcher": ChemLauncher,
+    "Oxidizer Chem Launcher": ChemLauncher,
+    "Striker Drone": Drone,
+    "Defender Drone": Drone,
+    "Bombardier Drone": Drone,
+    "Fixer Drone": Drone,
+    "Tactician Drone": Drone,
+    "Blinder Firefly": Firefly,
+    "Burster Firefly": Firefly,
+    "Demolisher Firefly": Firefly,
+    "Restorer Hive": Hive,
+    "Stinger Hive": Hive,
+    "Reviver Hive": Hive,
+    "Booster Hive": Hive,
+    "Artificer Hive": Hive,
+    "Scanner Pulse": Pulse,
+    "Remote Pulse": Pulse,
+    "Jammer Pulse": Pulse,
+    "Banshee Pulse": Pulse,
+    "Bulwark Ballistic Shield": Shield,
+    "Crusader Ballistic Shield": Shield,
+    "Deflector Ballistic Shield": Shield,
+    "Striker Shield": Shield,
+    "Assault Turret": Turret,
+    "Incinerator Turret": Turret,
+    "Sniper Turret": Turret,
+    "Artillery Turret": Turret,
+    "Explosive Seeker Mine": SeekerMine,
+    "Airburst Seeker Mine": SeekerMine,
+    "Cluster Seeker Mine": SeekerMine,
+    "Mender Seeker Mine": SeekerMine
 }
 
 function Selector(props) {
