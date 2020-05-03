@@ -23,7 +23,7 @@ export default {
                 },
                 "Skill Haste": {
                     modifies: ["Cooldown"],
-                    tiers: ["15%", "30%", "45%", "60%", "75%", "90%"]
+                    tiers: ["+15%", "+30%", "+45%", "+60%", "+75%", "+90%"]
                 }
             }
         }, {
@@ -35,305 +35,450 @@ export default {
                 Duration: "10.5s",
                 "PvP Damage": "321,193"
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Burn": {
+                    modifies: ["Damage"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
-                },
-                3: {
-
-                },
-                4: {
-
-                },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ],
-    "Trip-Wire Trap": [
+    "Trap": [
         {
-            name: "Trip-Wire Trap",
+            name: "Shock Trap",
             baseStats: {
-                Cooldown: "60s",
+                Cooldown: "50s",
+                Traps: "6",
+                "Shock Radius": "2m",
+                "Shock Duration": "6s",
+                Duration: "30s",
+                "PvP Shock Effect Duration": "1.8s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Traps": {
+                    modifies: ["Traps"],
+                    tiers: ["+2", "+2", "+4", "+6", "+8", "+10"]
                 },
-                2: {
-
+                "Shock Radius": {
+                    modifies: ["Shock Radius"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+                "Shock Duration": {
+                    modifies: ["Shock Duration"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
-                },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ],
     "Decoy": [
         {
-            name: "Decoy",
+            name: "Holographic Distraction",
             baseStats: {
-                Cooldown: "60s",
+                Cooldown: "25s",
+                Duration: "15s",
+                Health: "929,072 HP",
+                Threat: "100%",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Duration": {
+                    modifies: ["Duration"],
+                    tiers: ["+15%", "+30%", "+45%", "+60%", "+75%", "+90%"]
                 },
-                2: {
-
+                "Health": {
+                    modifies: ["Health"],
+                    tiers: ["+50%", "+100%", "+150%", "+200%", "+250%", "+300%"]
                 },
-                3: {
-
+                "Threat": {
+                    modifies: ["Threat"],
+                    tiers: ["+15%", "+30%", "+45%", "+60%", "+75%", "+90%"]
                 },
-                4: {
-
-                },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ],
     "Pulse": [
         {
-            name: "Pulse",
+            name: "Scanner Pulse",
             baseStats: {
                 Cooldown: "60s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
+            }
+        }, {
+            name: "Remote Pulse",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+            }
+        }, {
+            name: "Jammer Pulse",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
+            }
+        }, {
+            name: "Banshee Pulse",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ],
     "Turret": [
         {
-            name: "Turret",
+            name: "Assault Turret",
             baseStats: {
                 Cooldown: "60s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
+            }
+        }, {
+            name: "Incinerator Turret",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+            }
+        }, {
+            name: "Sniper Turret",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
+            }
+        }, {
+            name: "Artillery Turret",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ],
     "Hive": [
         {
-            name: "Hive",
+            name: "Restorer Hive",
             baseStats: {
                 Cooldown: "60s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
+            }
+        }, {
+            name: "Stinger Hive",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+            }
+        }, {
+            name: "Reviver Hive",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
+            }
+        }, {
+            name: "Booster Hive",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                5: {
-
+            }
+        }, {
+            name: "Artificer Hive",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                6: {
-
-                }
             }
         }
     ],
     "Chem Launcher": [
         {
-            name: "Chem Launcher",
+            name: "Reinforcer Chem Launcher",
             baseStats: {
                 Cooldown: "60s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
+            }
+        }, {
+            name: "Firestarter Chem Launcher",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+            }
+        }, {
+            name: "Riot Foam Chem Launcher",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
+            }
+        }, {
+            name: "Oxidizer Chem Launcher",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ],
     "Firefly": [
         {
-            name: "Firefly",
+            name: "Blinder Firefly",
             baseStats: {
                 Cooldown: "60s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
-                },
-                3: {
-
-                },
-                4: {
-
-                },
-                5: {
-
-                },
-                6: {
-
-                }
             }
-        }
+        }, {
+            name: "Burster Firefly",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
+                },
+            }
+        }, {
+            name: "Demolisher Firefly",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
+                },
+            }
+        },
     ],
     "Seeker Mine": [
         {
-            name: "Seeker Mine",
+            name: "Explosive Seeker Mine",
             baseStats: {
                 Cooldown: "60s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
+            }
+        }, {
+            name: "Airburst Seeker Mine",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+            }
+        }, {
+            name: "Cluster Seeker Mine",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
+            }
+        }, {
+            name: "Mender Seeker Mine",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ],
     "Drone": [
         {
-            name: "Drone",
+            name: "Striker Drone",
             baseStats: {
                 Cooldown: "60s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
+            }
+        }, {
+            name: "Defender Drone",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+            }
+        }, {
+            name: "Bombardier Drone",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
+            }
+        }, {
+            name: "Fixer Drone",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                5: {
-
+            }
+        }, {
+            name: "Tactician Drone",
+            baseStats: {
+                Cooldown: "60s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                6: {
-
-                }
             }
         }
     ],
-    "Shield": [
+    "Ballistic Shield": [
         {
-            name: "Shield",
+            name: "Bulwark Ballistic Shield",
             baseStats: {
                 Cooldown: "1s",
             },
-            tiers: {
-                1: {
-
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                2: {
-
+            }
+        }, {
+            name: "Crusader Ballistic Shield",
+            baseStats: {
+                Cooldown: "1s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                3: {
-
+            }
+        }, {
+            name: "Deflector Ballistic Shield",
+            baseStats: {
+                Cooldown: "1s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                4: {
-
+            }
+        }, {
+            name: "Striker Shield",
+            baseStats: {
+                Cooldown: "1s",
+            },
+            modifiers: {
+                "Cooldown": {
+                    modifies: ["Cooldown"],
+                    tiers: ["+10%", "+20%", "+30%", "+40%", "+50%", "+60%"]
                 },
-                5: {
-
-                },
-                6: {
-
-                }
             }
         }
     ]
