@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/division2builder/static/css/main.397b67cd.chunk.css",
-    "main.js": "/division2builder/static/js/main.0f34f92a.chunk.js",
-    "main.js.map": "/division2builder/static/js/main.0f34f92a.chunk.js.map",
+    "main.js": "/division2builder/static/js/main.b52cf5b9.chunk.js",
+    "main.js.map": "/division2builder/static/js/main.b52cf5b9.chunk.js.map",
     "runtime-main.js": "/division2builder/static/js/runtime-main.9f6a4a9e.js",
     "runtime-main.js.map": "/division2builder/static/js/runtime-main.9f6a4a9e.js.map",
     "static/css/2.de424728.chunk.css": "/division2builder/static/css/2.de424728.chunk.css",
-    "static/js/2.34641e6f.chunk.js": "/division2builder/static/js/2.34641e6f.chunk.js",
-    "static/js/2.34641e6f.chunk.js.map": "/division2builder/static/js/2.34641e6f.chunk.js.map",
+    "static/js/2.5d41e0f4.chunk.js": "/division2builder/static/js/2.5d41e0f4.chunk.js",
+    "static/js/2.5d41e0f4.chunk.js.map": "/division2builder/static/js/2.5d41e0f4.chunk.js.map",
     "index.html": "/division2builder/index.html",
-    "precache-manifest.f8901c589bbdeece2900ca20b3074fa0.js": "/division2builder/precache-manifest.f8901c589bbdeece2900ca20b3074fa0.js",
+    "precache-manifest.c73ef7bcbcd4cc7d911c4b93081e3509.js": "/division2builder/precache-manifest.c73ef7bcbcd4cc7d911c4b93081e3509.js",
     "service-worker.js": "/division2builder/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/division2builder/static/css/2.de424728.chunk.css.map",
     "static/css/main.397b67cd.chunk.css.map": "/division2builder/static/css/main.397b67cd.chunk.css.map",
-    "static/js/2.34641e6f.chunk.js.LICENSE.txt": "/division2builder/static/js/2.34641e6f.chunk.js.LICENSE.txt",
+    "static/js/2.5d41e0f4.chunk.js.LICENSE.txt": "/division2builder/static/js/2.5d41e0f4.chunk.js.LICENSE.txt",
     "static/media/AcesAndEights.png": "/division2builder/static/media/AcesAndEights.86747d53.png",
     "static/media/Airaldi.png": "/division2builder/static/media/Airaldi.64c568b2.png",
     "static/media/Borda Bold Italic.ttf": "/division2builder/static/media/Borda Bold Italic.dd782394.ttf",
@@ -43,8 +43,8 @@
   "entrypoints": [
     "static/js/runtime-main.9f6a4a9e.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.34641e6f.chunk.js",
+    "static/js/2.5d41e0f4.chunk.js",
     "static/css/main.397b67cd.chunk.css",
-    "static/js/main.0f34f92a.chunk.js"
+    "static/js/main.b52cf5b9.chunk.js"
   ]
 }
